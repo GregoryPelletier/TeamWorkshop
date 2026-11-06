@@ -38,8 +38,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Paralax
+    uniqueID: 3608476615
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BgTiles
+    uniqueID: 3405579095
+    locked: 0
+  - name: ForegroundLayer
+    uniqueID: 1101371759
     locked: 0
   m_RenderingLayers:
   - Default
