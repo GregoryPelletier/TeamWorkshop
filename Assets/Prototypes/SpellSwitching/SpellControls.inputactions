@@ -1,0 +1,120 @@
+{
+    "version": 1,
+    "name": "SpellControls",
+    "maps": [
+        {
+            "name": "Spells",
+            "id": "057fcfcf-c35a-4215-8f32-645dcf4c4b11",
+            "actions": [
+                {
+                    "name": "Cast",
+                    "type": "Button",
+                    "id": "ad5b0788-93a0-4bc6-bb8e-67cb1d2db408",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "SelectSpell1",
+                    "type": "Button",
+                    "id": "d5eff158-342c-4345-a411-453027311e5a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "SelectSpell2",
+                    "type": "Button",
+                    "id": "79196ae3-d6a1-40bd-b4ec-175f0429a1eb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "SelectSpell3",
+                    "type": "Button",
+                    "id": "44ffb2f0-49c5-4e7c-9e67-a1a8c9182ebd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "ScrollSpell",
+                    "type": "Value",
+                    "id": "d446aa27-f9f7-4d23-8a9b-4fc18e5e0943",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d53a4afd-99c8-4b63-845f-3d00b49294e9",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cast",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a2e1ba7-1b38-4a03-b032-4218343fb8aa",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectSpell1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b767c4a8-19fc-4456-983e-75b859d217b8",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectSpell2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a646dc30-4fe2-424b-a1e5-28ad70e1e745",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectSpell3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42700b94-eeca-4065-8aa8-c66c14d1e26a",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScrollSpell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
