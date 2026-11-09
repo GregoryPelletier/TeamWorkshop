@@ -13,6 +13,8 @@ public class SpellInput : MonoBehaviour
     private InputActionReference spellThreeAction;
     [SerializeField]
     private InputActionReference scrollAction;
+    [SerializeField]
+    private SpellTracker spellTracker;
     private void OnEnable()
     {
         castAction.action.Enable();
@@ -48,25 +50,30 @@ public class SpellInput : MonoBehaviour
         if (spellOneAction.action.WasPressedThisFrame())
         {
             Debug.Log("Spell one selected");
+            spellTracker.SelectSpell(0);
         }
 
         if (spellTwoAction.action.WasPressedThisFrame())
         {
             Debug.Log("Spell two selected");
+            spellTracker.SelectSpell(1);
         }
 
         if (spellThreeAction.action.WasPressedThisFrame())
         {
             Debug.Log("Spell three selected");
+            spellTracker.SelectSpell(2);
         }
 
         float scrollValue = scrollAction.action.ReadValue<float>();
         if (scrollValue > 0)
         {
+            spellTracker.SelectNextSpell(1);
             Debug.Log("Scroll up");
         }
         else if (scrollValue < 0)
         {
+            spellTracker.SelectNextSpell(-1);
             Debug.Log("Scroll down");
         }
     }
