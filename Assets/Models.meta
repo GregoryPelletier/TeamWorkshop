@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Models.meta
 guid: e16695bba5d5e144bb091529f853cf25
+========
+guid: ad82c6903e278b142a5e240f5801ebe8
+>>>>>>>> origin/main:Assets/Models/LavaImp.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
