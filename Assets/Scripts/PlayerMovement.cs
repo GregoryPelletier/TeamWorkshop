@@ -7,28 +7,28 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 25f;
     public LayerMask groundLayer;
     public float jumpClipLength = 0.875f; // Change this to the exact length of your Mage_Jump clip in seconds
-    private Rigidbody2D rb;
-    private Collider2D coll;
-    private Animator anim;
+    private Rigidbody2D playerBody;
+    private Collider2D playerCollider;
+    private Animator playerAnimator;
     private float moveInput;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<Collider2D>();
-        anim = GetComponent<Animator>();
+        playerBody = GetComponent<Rigidbody2D>();
+        playerCollider = GetComponent<Collider2D>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        playerBody.linearVelocity = new Vector2(moveInput * moveSpeed, playerBody.linearVelocity.y);
 
         // Tells the Animator how fast the player is trying to move
-        anim.SetFloat("Speed", Mathf.Abs(moveInput));
+        playerAnimator.SetFloat("Speed", Mathf.Abs(moveInput));
 
         // NEW: Updates the Animator with jumping/falling data
-        anim.SetBool("isGrounded", IsGrounded());
-        anim.SetFloat("yVelocity", rb.linearVelocity.y);
+        playerAnimator.SetBool("isGrounded", IsGrounded());
+        playerAnimator.SetFloat("yVelocity", playerBody.linearVelocity.y);
 
         // Flips the entire character object to face left (-1) or right (1)
         if (moveInput > 0.01f)
@@ -51,21 +51,24 @@ public class PlayerMovement : MonoBehaviour
         if (value.isPressed && IsGrounded())
         {
             // Apply the jump force
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            playerBody.linearVelocity = new Vector2(playerBody.linearVelocity.x, jumpForce);
 
             // Calculate hang time: (2 * Initial Velocity) / Gravity
-            float gravity = Mathf.Abs(Physics2D.gravity.y * rb.gravityScale);
-            float totalHangTime = (jumpForce * 2f) / gravity;
+            float gravityStrength = Mathf.Abs(Physics2D.gravity.y * playerBody.gravityScale);
+            float totalHangTime = (jumpForce * 2f) / gravityStrength;
 
             // Set animation speed so clip length perfectly matches hang time
             float calculatedSpeed = jumpClipLength / totalHangTime;
-            anim.SetFloat("JumpSpeedMultiplier", calculatedSpeed);
+            playerAnimator.SetFloat("JumpSpeedMultiplier", calculatedSpeed);
         }
     }
 
     private bool IsGrounded()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, groundLayer);
-        return hit.collider != null;
+        // The box is made a little narrower than the player so a wall beside the player
+        // does not count as ground (that is what let the player stick to the side of things).
+        Vector2 castSize = new Vector2(playerCollider.bounds.size.x * 0.8f, playerCollider.bounds.size.y);
+        RaycastHit2D groundHit = Physics2D.BoxCast(playerCollider.bounds.center, castSize, 0f, Vector2.down, 0.1f, groundLayer);
+        return groundHit.collider != null;
     }
 }

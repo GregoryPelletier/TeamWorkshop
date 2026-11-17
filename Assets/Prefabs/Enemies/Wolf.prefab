@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1934588202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6774071282}
+  - component: {fileID: 3758458309}
+  - component: {fileID: 2563935316}
+  m_Layer: 0
+  m_Name: Wolf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6774071282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934588202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3758458309
+SpriteRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934588202}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1101371759
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 21300000, guid: 5b8b04de294e4403926177933cad1a81, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!114 &2563935316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934588202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc27740d81841749bca138c2df470c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitsToKill: 5
+  moveStyle: 0
+  moveSpeed: 2.2
+  noticeRange: 5
+  stayNearHome: 5
+  attackRange: 0.12
+  attackCooldown: 1.2
+  hitDelay: 0.3
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  idleFrames:
+  - {fileID: 21300000, guid: 5b8b04de294e4403926177933cad1a81, type: 3}
+  - {fileID: 21300000, guid: 2c3aee2d69fb4daabc24fefc6a8d23c4, type: 3}
+  - {fileID: 21300000, guid: 8c34e6aa221b4b689e04e8dd7a2627fc, type: 3}
+  - {fileID: 21300000, guid: 3f89d10b366a4e8b97f176b0ef621027, type: 3}
+  walkFrames:
+  - {fileID: 21300000, guid: deaa8f9a32b2455fa14afdfbfb84ab9e, type: 3}
+  - {fileID: 21300000, guid: 7146507294a7479d9365623746cdd1d4, type: 3}
+  - {fileID: 21300000, guid: 7cbb0e59a2394a198ab6b293bf1ec50d, type: 3}
+  - {fileID: 21300000, guid: faa0bd62d1c94106b5bb2a466e329bef, type: 3}
+  - {fileID: 21300000, guid: 8c982c0083dc4fcb8d0eac28544b2e8d, type: 3}
+  - {fileID: 21300000, guid: b5d77b2aed9c4df3b6477acb85d84aeb, type: 3}
+  attackFrames:
+  - {fileID: 21300000, guid: 8516bff9d7074e1f8b50626892bd63e3, type: 3}
+  - {fileID: 21300000, guid: bf8f6f7e8f7a4b39a72ba8aa271827eb, type: 3}
+  - {fileID: 21300000, guid: 76b72fa10f9e41ec9287fe518a20f578, type: 3}
+  - {fileID: 21300000, guid: e8dd4ec3fe3f4578ae49ed4126894969, type: 3}
+  hurtFrames:
+  - {fileID: 21300000, guid: 9b4ef2edae674f3c9068c5f25e8d9304, type: 3}
+  - {fileID: 21300000, guid: 671e9d762f0a41ffb415f49faa815c44, type: 3}
+  deathFrames:
+  - {fileID: 21300000, guid: 86d42e919c9540d3a1aeb0cd53781766, type: 3}
+  - {fileID: 21300000, guid: 2e5923db725f49d0b97a6d44c38d12e3, type: 3}
+  - {fileID: 21300000, guid: 71d305d4c9f7415687175db885bb45d9, type: 3}
+  - {fileID: 21300000, guid: 5922630b01ec416e98c45c5065d41a63, type: 3}
+  framesPerSecond: 10
+  spriteFacesRight: 1
+  hoverHeight: 0.9
+  bobAmount: 0.12
+  hitBoxSize: {x: 0.6, y: 0.45}
+  hitBoxOffset: {x: 0, y: 0.25}

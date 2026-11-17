@@ -17,53 +17,93 @@ public class FireballCaster : MonoBehaviour
 
     public float Mana { get; private set; }
     float nextCastTime;
-    float facing = 1f;   // 1 = right, -1 = left
-    Animator animator;
+    float facingDirection = 1f;   // 1 = right, -1 = left
+    Animator castAnimator;
 
     void Start()
     {
         Mana = maxMana;
-        animator = GetComponent<Animator>();
-        if (animator == null) Debug.LogWarning("FireballCaster: no Animator on this object, cast animation will not play.");
-        if (fireballPrefab == null) Debug.LogWarning("FireballCaster: Fireball Prefab slot is empty.");
+        castAnimator = GetComponent<Animator>();
+        if (castAnimator == null)
+        {
+            Debug.LogWarning("FireballCaster: no Animator on this object, cast animation will not play.");
+        }
+        if (fireballPrefab == null)
+        {
+            Debug.LogWarning("FireballCaster: Fireball Prefab slot is empty.");
+        }
     }
 
     void Update()
     {
-        var kb = Keyboard.current;
-        var mouse = Mouse.current;
-        if (kb == null) return;
+        var keyboardInput = Keyboard.current;
+        var mouseInput = Mouse.current;
+        if (keyboardInput == null)
+        {
+            return;
+        }
 
-        if (kb.leftArrowKey.isPressed || kb.aKey.isPressed) facing = -1f;
-        if (kb.rightArrowKey.isPressed || kb.dKey.isPressed) facing = 1f;
+        if (keyboardInput.leftArrowKey.isPressed || keyboardInput.aKey.isPressed)
+        {
+            facingDirection = -1f;
+        }
+        if (keyboardInput.rightArrowKey.isPressed || keyboardInput.dKey.isPressed)
+        {
+            facingDirection = 1f;
+        }
 
         Mana = Mathf.Min(maxMana, Mana + manaRegenPerSecond * Time.deltaTime);
 
-        bool castPressed = kb.fKey.wasPressedThisFrame ||
-                           (mouse != null && mouse.leftButton.wasPressedThisFrame);
-        if (castPressed) Cast();
+        bool castPressed = keyboardInput.fKey.wasPressedThisFrame ||
+                           (mouseInput != null && mouseInput.leftButton.wasPressedThisFrame);
+        if (castPressed)
+        {
+            Cast();
+        }
     }
 
     void Cast()
     {
-        if (Time.time < nextCastTime) return;
-        if (Mana < manaCost) return;
+        if (Time.time < nextCastTime)
+        {
+            return;
+        }
+        if (Mana < manaCost)
+        {
+            return;
+        }
 
         Mana -= manaCost;
         nextCastTime = Time.time + cooldown;
 
-        if (animator != null) animator.SetTrigger("Cast");   // plays AttackCastBall
+        // Only use the Cast trigger if the Animator has one (PlayerFighter shows the cast pose otherwise).
+        if (castAnimator != null)
+        {
+            foreach (AnimatorControllerParameter animatorParameter in castAnimator.parameters)
+            {
+                if (animatorParameter.name == "Cast")
+                {
+                    castAnimator.SetTrigger("Cast");   // plays AttackCastBall
+                }
+            }
+        }
 
-        if (spawnDelay >= 0f) Invoke(nameof(SpawnFireball), spawnDelay);
+        if (spawnDelay >= 0f)
+        {
+            Invoke(nameof(SpawnFireball), spawnDelay);
+        }
         // if spawnDelay is -1, the Animation Event calls SpawnFireball()
     }
 
     // Public so an Animation Event can call it on the exact frame.
     public void SpawnFireball()
     {
-        if (fireballPrefab == null) return;
-        Vector3 pos = transform.position + new Vector3(spawnOffset.x * facing, spawnOffset.y, 0f);
-        GameObject go = Instantiate(fireballPrefab, pos, Quaternion.identity);
-        go.GetComponent<Fireball>().Init(new Vector2(facing, 0f));
+        if (fireballPrefab == null)
+        {
+            return;
+        }
+        Vector3 spawnPosition = transform.position + new Vector3(spawnOffset.x * facingDirection, spawnOffset.y, 0f);
+        GameObject fireballObject = Instantiate(fireballPrefab, spawnPosition, Quaternion.identity);
+        fireballObject.GetComponent<Fireball>().Init(new Vector2(facingDirection, 0f));
     }
 }

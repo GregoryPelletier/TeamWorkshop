@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!212 &25683569
 SpriteRenderer:
   serializedVersion: 3
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!212 &44619904
 SpriteRenderer:
   serializedVersion: 3
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!212 &54538010
 SpriteRenderer:
   serializedVersion: 3
@@ -2050,7 +2050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!212 &128430785
 SpriteRenderer:
   serializedVersion: 3
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!1 &145520000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,7 +2842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!212 &200665258
 SpriteRenderer:
   serializedVersion: 3
@@ -3449,7 +3449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!212 &337489181
 SpriteRenderer:
   serializedVersion: 3
@@ -3647,7 +3647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!212 &354547591
 SpriteRenderer:
   serializedVersion: 3
@@ -3937,7 +3937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!212 &380092065
 SpriteRenderer:
   serializedVersion: 3
@@ -4135,7 +4135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!212 &396292344
 SpriteRenderer:
   serializedVersion: 3
@@ -4517,7 +4517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!212 &432504444
 SpriteRenderer:
   serializedVersion: 3
@@ -4623,7 +4623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!212 &448519859
 SpriteRenderer:
   serializedVersion: 3
@@ -4731,7 +4731,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8981c6ef44804078a17eb5029b2d2197, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -4782,7 +4782,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -4882,7 +4882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 3
-  jumpForce: 5
+  jumpForce: 5.4
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -5355,7 +5355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!212 &512438958
 SpriteRenderer:
   serializedVersion: 3
@@ -5461,7 +5461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!212 &521161706
 SpriteRenderer:
   serializedVersion: 3
@@ -6579,7 +6579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!212 &598325480
 SpriteRenderer:
   serializedVersion: 3
@@ -86603,7 +86603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!212 &644452713
 SpriteRenderer:
   serializedVersion: 3
@@ -87169,7 +87169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!212 &734838370
 SpriteRenderer:
   serializedVersion: 3
@@ -87551,7 +87551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!212 &804898743
 SpriteRenderer:
   serializedVersion: 3
@@ -88538,7 +88538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!212 &947587599
 SpriteRenderer:
   serializedVersion: 3
@@ -89104,7 +89104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!212 &1033518743
 SpriteRenderer:
   serializedVersion: 3
@@ -89508,7 +89508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!212 &1084329955
 SpriteRenderer:
   serializedVersion: 3
@@ -89689,7 +89689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!1 &1140643433
 GameObject:
   m_ObjectHideFlags: 0
@@ -89978,7 +89978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!212 &1155285337
 SpriteRenderer:
   serializedVersion: 3
@@ -90176,7 +90176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!212 &1165067479
 SpriteRenderer:
   serializedVersion: 3
@@ -90875,7 +90875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!212 &1269848563
 SpriteRenderer:
   serializedVersion: 3
@@ -91574,7 +91574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!212 &1328239762
 SpriteRenderer:
   serializedVersion: 3
@@ -92048,7 +92048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!212 &1368305380
 SpriteRenderer:
   serializedVersion: 3
@@ -92246,7 +92246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!212 &1378401739
 SpriteRenderer:
   serializedVersion: 3
@@ -92444,7 +92444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!212 &1393388274
 SpriteRenderer:
   serializedVersion: 3
@@ -93042,7 +93042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!212 &1450835732
 SpriteRenderer:
   serializedVersion: 3
@@ -93301,7 +93301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!1001 &1467080519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93733,7 +93733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!212 &1556057818
 SpriteRenderer:
   serializedVersion: 3
@@ -93914,7 +93914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!1 &1584151914
 GameObject:
   m_ObjectHideFlags: 0
@@ -94313,7 +94313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!212 &1615349088
 SpriteRenderer:
   serializedVersion: 3
@@ -94603,7 +94603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.4, y: 0}
+  parallaxMultiplier: {x: 0.5, y: 0}
 --- !u!212 &1659080015
 SpriteRenderer:
   serializedVersion: 3
@@ -94990,7 +94990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!212 &1742662655
 SpriteRenderer:
   serializedVersion: 3
@@ -95388,7 +95388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.7, y: 0}
+  parallaxMultiplier: {x: 0.3, y: 0}
 --- !u!212 &1824962657
 SpriteRenderer:
   serializedVersion: 3
@@ -95494,7 +95494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0.2, y: 0}
+  parallaxMultiplier: {x: 0.7, y: 0}
 --- !u!212 &1841153955
 SpriteRenderer:
   serializedVersion: 3
@@ -95600,7 +95600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!212 &1862733283
 SpriteRenderer:
   serializedVersion: 3
@@ -97325,7 +97325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb8861936bfd4945a083dd47635c5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
-  parallaxMultiplier: {x: 0, y: 0}
+  parallaxMultiplier: {x: 0.9, y: 0}
 --- !u!212 &2125184262
 SpriteRenderer:
   serializedVersion: 3

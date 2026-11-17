@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ParallaxBackground : MonoBehaviour
 {
-    [Tooltip("0 = Moves with camera (Sky). 1 = Stationary (Foreground). 0.5 = Half speed.")]
+    [Tooltip("How much this layer follows the camera. 1 = moves with the camera (very far away, like the sky). 0 = stays put like the ground. Far layers use high numbers, near layers low numbers.")]
     [SerializeField] private Vector2 parallaxMultiplier;
 
     private Transform cameraTransform;
