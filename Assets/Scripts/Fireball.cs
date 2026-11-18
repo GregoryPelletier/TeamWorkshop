@@ -26,22 +26,28 @@ public class Fireball : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        if (otherCollider.isTrigger)
-        {
-            return;                                   // ignore pickups, zones, etc.
-        }
         if (otherCollider.GetComponentInParent<FireballCaster>() != null)
         {
             return; // ignore the player who cast it
         }
 
-        // Anything that can be hit (an enemy) takes one hit.
-        IHittable hitTarget = otherCollider.GetComponentInParent<IHittable>();
-        if (hitTarget != null && !hitTarget.IsDefeated)
+        // Anything with Health (an enemy, a wooden gate, a cage) takes the fireball's damage as fire.
+        Health hitHealth = otherCollider.GetComponentInParent<Health>();
+        if (hitHealth != null)
         {
-            hitTarget.TakeHit();
+            if (hitHealth.IsDefeated || !hitHealth.CanBeHurtBy(Team.Player))
+            {
+                return;
+            }
+            hitHealth.TakeDamage(Mathf.Max(1, Mathf.RoundToInt(damage)), DamageType.Fire, Team.Player);
+            Destroy(gameObject);   // fireball is used up on impact
+            return;
         }
 
-        Destroy(gameObject);   // fireball is used up on impact
+        if (otherCollider.isTrigger)
+        {
+            return;                                   // ignore pickups, zones, etc.
+        }
+        Destroy(gameObject);   // fireball is used up on walls and the ground
     }
 }

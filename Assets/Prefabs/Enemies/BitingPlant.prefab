@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7460023374}
   - component: {fileID: 1805025611}
-  - component: {fileID: 6747582818}
+  - component: {fileID: 1984982403}
+  - component: {fileID: 7208788279}
+  - component: {fileID: 6878084724}
+  - component: {fileID: 6453900196}
   m_Layer: 0
   m_Name: BitingPlant
   m_TagString: Untagged
@@ -86,7 +89,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &6747582818
+--- !u!114 &1984982403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,19 +98,82 @@ MonoBehaviour:
   m_GameObject: {fileID: 5653980015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbc27740d81841749bca138c2df470c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 3
+  team: 1
+  maxHealth: 3
+  healAmount: 0
+  makeHitBox: 1
+  hitBoxSize: {x: 0.3, y: 0.5}
+  hitBoxOffset: {x: 0, y: 0.25}
+  dropWhenDefeated: {fileID: 0}
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7208788279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5653980015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   moveStyle: 2
   moveSpeed: 0
   noticeRange: 1.6
+  noticeHeight: 2.5
   stayNearHome: 0
   attackRange: 0.35
-  attackCooldown: 1.8
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
+--- !u!114 &6878084724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5653980015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.6
+  cooldown: 1.8
   hitDelay: 0.35
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+--- !u!114 &6453900196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5653980015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 1
+  spriteFacesRight: 1
   faceLeftAngle: -90
   faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
   idleFrames:
   - {fileID: 21300000, guid: 33b48f01972e4a00a2fda1db86260c4d, type: 3}
   - {fileID: 21300000, guid: 196d0dd464ea44de869dea21692df102, type: 3}
@@ -122,10 +188,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 320c0cc635be458e9b555b0637d3607b, type: 3}
   - {fileID: 21300000, guid: f1de03220c254224a295e19138989d1e, type: 3}
   hurtFrames: []
-  deathFrames: []
+  defeatFrames: []
   framesPerSecond: 8
-  spriteFacesRight: 1
-  hoverHeight: 0.9
-  bobAmount: 0.12
-  hitBoxSize: {x: 0.3, y: 0.5}
-  hitBoxOffset: {x: 0, y: 0.25}
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 2.5
+  fadeTime: 0.5

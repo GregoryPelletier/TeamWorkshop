@@ -71,6 +71,17 @@
                 },
                 {
                     "name": "",
+                    "id": "b88a17de-b9cd-4117-9e16-2a4bf571bdfa",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cast",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8a2e1ba7-1b38-4a03-b032-4218343fb8aa",
                     "path": "<Keyboard>/1",
                     "interactions": "",

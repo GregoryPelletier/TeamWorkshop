@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2884145024}
   - component: {fileID: 8008184749}
-  - component: {fileID: 6055639356}
+  - component: {fileID: 8792862329}
+  - component: {fileID: 4531317774}
+  - component: {fileID: 7815084657}
+  - component: {fileID: 1146481192}
   m_Layer: 0
   m_Name: Wisp
   m_TagString: Untagged
@@ -86,7 +89,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &6055639356
+--- !u!114 &8792862329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,19 +98,82 @@ MonoBehaviour:
   m_GameObject: {fileID: 3934276050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbc27740d81841749bca138c2df470c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitsToKill: 3
+  team: 1
+  maxHealth: 3
+  healAmount: 0
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  dropWhenDefeated: {fileID: 0}
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4531317774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934276050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   moveStyle: 1
   moveSpeed: 1.1
   noticeRange: 4.5
+  noticeHeight: 2.5
   stayNearHome: 4
   attackRange: 0.05
-  attackCooldown: 2.0
+  reachHeight: 0.7
+  hoverHeight: 0.2
+  bobAmount: 0.12
+--- !u!114 &7815084657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934276050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.3
+  cooldown: 2.0
   hitDelay: 0.2
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+--- !u!114 &1146481192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934276050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 1
+  spriteFacesRight: 0
   faceLeftAngle: -90
   faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
   idleFrames:
   - {fileID: 21300000, guid: f852e99dcbf046a9b65e05e8f590082a, type: 3}
   - {fileID: 21300000, guid: 9bc136299795469aa36f25d4d9c1f1e6, type: 3}
@@ -136,10 +202,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 278af040f3f34fadbd841bf739f407d7, type: 3}
   - {fileID: 21300000, guid: 9f94e9bc15084626aa9f1f364c5c96de, type: 3}
   hurtFrames: []
-  deathFrames: []
+  defeatFrames: []
   framesPerSecond: 12
-  spriteFacesRight: 0
-  hoverHeight: 0.2
-  bobAmount: 0.12
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 2.5
+  fadeTime: 0.5
