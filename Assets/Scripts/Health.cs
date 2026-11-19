@@ -75,7 +75,7 @@ public class Health : MonoBehaviour
     [Tooltip("Something to switch on where this falls, like a spell orb.")]
     public GameObject dropWhenDefeated;
     [Tooltip("Scripts to switch off, like the player's movement.")]
-    public Behaviour[] turnOffWhenDefeated;
+    public Behaviour[] turnOffWhenDefeated = new Behaviour[0];
     public bool restartLevelWhenDefeated = false;
     public float restartDelay = 3f;
     public UnityEvent whenDefeated;
@@ -85,6 +85,7 @@ public class Health : MonoBehaviour
     public event Action WasHurt;
     public event Action WasBlocked;
     public event Action WasDefeated;
+    public event Action WasRevived;
 
     public int CurrentHealth { get; private set; }
     public bool IsDefeated { get; private set; }
@@ -93,6 +94,7 @@ public class Health : MonoBehaviour
     public Collider2D Body { get; private set; }
 
     float healTimer;
+    Vector3 homePosition;
     float shieldDownUntil = -100f;
     float nextBlockedMessageTime;
 
@@ -109,6 +111,7 @@ public class Health : MonoBehaviour
     void Awake()
     {
         CurrentHealth = maxHealth;
+        homePosition = transform.position;
         if (makeHitBox)
         {
             Body = MakeHitBox();
@@ -255,14 +258,55 @@ public class Health : MonoBehaviour
         }
     }
 
+    // Brings this back at full health where it started, for example a mini boss
+    // that has to be beaten again when the player loses its spell.
+    public void Revive()
+    {
+        if (!IsDefeated)
+        {
+            return;
+        }
+        transform.position = homePosition;
+        if (!gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+        }
+        IsDefeated = false;
+        CurrentHealth = maxHealth;
+        healTimer = 0f;
+        shieldDownUntil = -100f;
+        if (turnOffWhenDefeated != null)
+        {
+            foreach (Behaviour oneBehaviour in turnOffWhenDefeated)
+            {
+                if (oneBehaviour != null)
+                {
+                    oneBehaviour.enabled = true;
+                }
+            }
+        }
+        if (makeHitBox && Body != null)
+        {
+            Body.enabled = true;
+        }
+        if (WasRevived != null)
+        {
+            WasRevived();
+        }
+    }
+
     void Defeat()
     {
         IsDefeated = true;
-        foreach (Behaviour oneBehaviour in turnOffWhenDefeated)
+        // older saved objects can have no list at all, which would stop the defeat here
+        if (turnOffWhenDefeated != null)
         {
-            if (oneBehaviour != null)
+            foreach (Behaviour oneBehaviour in turnOffWhenDefeated)
             {
-                oneBehaviour.enabled = false;
+                if (oneBehaviour != null)
+                {
+                    oneBehaviour.enabled = false;
+                }
             }
         }
         if (makeHitBox && Body != null)
@@ -280,7 +324,10 @@ public class Health : MonoBehaviour
             dropWhenDefeated.SetActive(true);
         }
         GameMessage.Show(messageWhenDefeated);
-        whenDefeated.Invoke();
+        if (whenDefeated != null)
+        {
+            whenDefeated.Invoke();
+        }
         if (WasDefeated != null)
         {
             WasDefeated();
@@ -304,7 +351,7 @@ public class Health : MonoBehaviour
         bool foundRenderer = false;
         foreach (Renderer partRenderer in GetComponentsInChildren<Renderer>())
         {
-            if (partRenderer is ParticleSystemRenderer || partRenderer.gameObject.name == "Cape")
+            if (partRenderer is ParticleSystemRenderer)
             {
                 continue;
             }

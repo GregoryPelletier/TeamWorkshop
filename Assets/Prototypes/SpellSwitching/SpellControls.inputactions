@@ -61,18 +61,7 @@
                 {
                     "name": "",
                     "id": "d53a4afd-99c8-4b63-845f-3d00b49294e9",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cast",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b88a17de-b9cd-4117-9e16-2a4bf571bdfa",
-                    "path": "<Keyboard>/b",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

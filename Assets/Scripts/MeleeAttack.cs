@@ -21,8 +21,11 @@ public class MeleeAttack : MonoBehaviour
     public float pauseAfterHit = 0f;
 
     [Header("Player only")]
-    [Tooltip("Attack with J or the right mouse button.")]
+    [Tooltip("Attack with V or the left mouse button.")]
     public bool useKeyboard = false;
+
+    [Tooltip("Hit low, along the ground in front of the feet (the player sets this while crouching).")]
+    public bool attackLow = false;
 
     public bool IsAttacking { get; private set; }
 
@@ -44,8 +47,8 @@ public class MeleeAttack : MonoBehaviour
         }
         Keyboard keyboardInput = Keyboard.current;
         Mouse mouseInput = Mouse.current;
-        bool attackPressed = (keyboardInput != null && keyboardInput.jKey.wasPressedThisFrame) ||
-                             (mouseInput != null && mouseInput.rightButton.wasPressedThisFrame);
+        bool attackPressed = (keyboardInput != null && keyboardInput.vKey.wasPressedThisFrame) ||
+                             (mouseInput != null && mouseInput.leftButton.wasPressedThisFrame);
         if (attackPressed)
         {
             TryAttack();
@@ -92,6 +95,13 @@ public class MeleeAttack : MonoBehaviour
             float facingDirection = FacingDirection();
             Vector2 hitCenter = new Vector2(myBox.center.x + facingDirection * (myBox.extents.x + reach / 2f), myBox.center.y);
             Vector2 hitSize = new Vector2(reach, myBox.size.y);
+            if (attackLow)
+            {
+                // a low sweep: from just below the feet to a little above them, reaching a bit further
+                float sweepReach = reach * 1.3f;
+                hitCenter = new Vector2(myBox.center.x + facingDirection * (myBox.extents.x + sweepReach / 2f), myBox.min.y + 0.1f);
+                hitSize = new Vector2(sweepReach, 0.35f);
+            }
             HashSet<Health> alreadyHit = new HashSet<Health>();
             foreach (Collider2D touchedCollider in Physics2D.OverlapBoxAll(hitCenter, hitSize, 0f))
             {

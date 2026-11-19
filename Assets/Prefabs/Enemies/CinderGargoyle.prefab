@@ -203,5 +203,5 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5

@@ -1102,6 +1102,56 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 24}
   m_EdgeRadius: 0
+--- !u!114 &102636532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403933876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStyle: 0
+  moveSpeed: 1.2
+  noticeRange: 4.5
+  noticeHeight: 2.5
+  stayNearHome: 3.5
+  attackRange: 0.15
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
+--- !u!1001 &103073231
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1713997221}
+    m_Modifications:
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_Name
+      value: Fairy 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
 --- !u!1 &105286165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1631,109 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3288468337185982548, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
   m_PrefabInstance: {fileID: 382947329}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &173240596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323355639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.3
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
+--- !u!61 &176297336
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770163912}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 1.1875}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.75, y: 2.375}
+    newSize: {x: 1.5, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.7, y: 2.375}
+  m_EdgeRadius: 0
+--- !u!114 &185850732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186159748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 6
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &214044799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,6 +1923,46 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
   m_PrefabInstance: {fileID: 1093282209}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &263954304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451879531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
+  maxHealth: 12
+  healAmount: 1
+  healDelay: 0.5
+  healDelayInCombat: 12
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 0
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated:
+  - {fileID: 451879536}
+  - {fileID: 529658751}
+  - {fileID: 967536308}
+  restartLevelWhenDefeated: 1
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &265275886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1900,6 +2093,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3288468337185982548, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
   m_PrefabInstance: {fileID: 265275886}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &267465203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460251422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 15
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 592491201}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &269111510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7460023374, guid: 8fcd5c16ba1e40b1867a8174608b7e4c, type: 3}
@@ -2234,6 +2464,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &302420609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679466450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 2
+  maxHealth: 6
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 1
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 369741294}
+  makeHitBox: 0
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: The boss is locked in a cage. Only fire can break it.
+  messageWhenHurt: The cage cracks!
+  messageWhenDefeated: The cage breaks! The boss is free!
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &302454146
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,6 +2714,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &322441350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460251422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.4
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
+--- !u!114 &330121454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497091625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStyle: 0
+  moveSpeed: 0.9
+  noticeRange: 4
+  noticeHeight: 2.5
+  stayNearHome: 3
+  attackRange: 0.15
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
 --- !u!1 &338237511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,6 +2861,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1267635067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &345345222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231078224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.6
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
 --- !u!1 &347736961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2645,6 +2973,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!4 &351150601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+  m_PrefabInstance: {fileID: 1376773458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &359513056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231078224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStyle: 0
+  moveSpeed: 0.9
+  noticeRange: 4
+  noticeHeight: 2.5
+  stayNearHome: 3
+  attackRange: 0.15
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
+--- !u!114 &369741294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391334444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 20
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &382947329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2773,6 +3164,35 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1481434808}
   m_SourcePrefab: {fileID: 100100000, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
+--- !u!1001 &385861884
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1713997221}
+    m_Modifications:
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_Name
+      value: Fairy 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
 --- !u!1 &393181610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,110 +3285,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &185850732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186159748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 6
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1057114423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186159748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStyle: 0
-  moveSpeed: 0.9
-  noticeRange: 4
-  noticeHeight: 2.5
-  stayNearHome: 3
-  attackRange: 0.15
-  reachHeight: 0.7
-  hoverHeight: 0.9
-  bobAmount: 0.12
---- !u!114 &1534477855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186159748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.6
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &1436257385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186159748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 2
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations:
-  - attack
-  castAnimation: 
-  hurtAnimation: hit
-  defeatAnimation: die
-  idleAnimation: 
-  walkingSetting: isWalking
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 1
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: 2.5
-  fadeTime: 0.5
 --- !u!1 &411243703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2985,6 +3301,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &417419690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468166758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStyle: 0
+  moveSpeed: 0.9
+  noticeRange: 4
+  noticeHeight: 2.5
+  stayNearHome: 3
+  attackRange: 0.15
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
 --- !u!1 &426741407
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,110 +3598,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &1275274395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1107537441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 6
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &936641504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1107537441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStyle: 0
-  moveSpeed: 0.9
-  noticeRange: 4
-  noticeHeight: 2.5
-  stayNearHome: 3
-  attackRange: 0.15
-  reachHeight: 0.7
-  hoverHeight: 0.9
-  bobAmount: 0.12
---- !u!114 &1391695971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1107537441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.6
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &720550685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1107537441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 2
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations:
-  - attack
-  castAnimation: 
-  hurtAnimation: hit
-  defeatAnimation: die
-  idleAnimation: 
-  walkingSetting: isWalking
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 1
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: 2.5
-  fadeTime: 0.5
 --- !u!1 &440576120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3651,6 +3884,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   jumpClipLength: 0.875
+  crouchHeight: 0.6
 --- !u!114 &451879537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3702,6 +3936,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &456377647 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+  m_PrefabInstance: {fileID: 385861884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &456646286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3900,6 +4139,52 @@ Transform:
   - {fileID: 96293420}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &475907888
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827307019}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 24}
+  m_EdgeRadius: 0
 --- !u!1 &482148273
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,6 +4494,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1796586557}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529658751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451879531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703b1e760cba2354eba8f1e818dec042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castAction: {fileID: 2997236349562526588, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
+  spellOneAction: {fileID: -1770403973892238452, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
+  spellTwoAction: {fileID: 7486165312493694239, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
+  spellThreeAction: {fileID: -3895815793288839552, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
+  scrollAction: {fileID: -3254314117099824288, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
+  spellTracker: {fileID: 917660058}
+  fireballCaster: {fileID: 967536308}
+  rainCaster: {fileID: 0}
 --- !u!1001 &532192409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4319,7 +4624,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6690881965344529813, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 620280635}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
       insertIndex: -1
@@ -4339,6 +4647,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3288468337185982548, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
   m_PrefabInstance: {fileID: 532192409}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &550303595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461275627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStyle: 0
+  moveSpeed: 0.9
+  noticeRange: 4
+  noticeHeight: 2.5
+  stayNearHome: 3
+  attackRange: 0.15
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
+--- !u!4 &552402576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770163912}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 58.7, y: 1, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1713997221}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560024874
 GameObject:
   m_ObjectHideFlags: 0
@@ -4537,6 +4881,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 772002132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &573273239
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1713997221}
+    m_Modifications:
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_Name
+      value: Fairy 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
 --- !u!1 &589312307
 GameObject:
   m_ObjectHideFlags: 0
@@ -4863,7 +5236,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6690881965344529813, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1862523220}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
       insertIndex: -1
@@ -5100,6 +5476,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1267635067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &620280635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+  m_PrefabInstance: {fileID: 903436881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &623243958
 GameObject:
   m_ObjectHideFlags: 0
@@ -70577,18 +70958,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &675433707 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2884145024, guid: be299b309135466ab8385b53af011d49, type: 3}
-  m_PrefabInstance: {fileID: 1141276425}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1982711115
+--- !u!114 &674206564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231078224}
+  m_GameObject: {fileID: 497091625}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
@@ -70597,20 +70973,60 @@ MonoBehaviour:
   team: 1
   maxHealth: 6
   healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
   makeHitBox: 1
   hitBoxSize: {x: 0, y: 0}
   hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
   dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
   whenDefeated:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &359513056
+--- !u!4 &675433707 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2884145024, guid: be299b309135466ab8385b53af011d49, type: 3}
+  m_PrefabInstance: {fileID: 1141276425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &679466450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1885350792}
+  - component: {fileID: 821862987}
+  - component: {fileID: 1715587081}
+  - component: {fileID: 302420609}
+  - component: {fileID: 1277514051}
+  m_Layer: 0
+  m_Name: Boss Cage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &690370347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231078224}
+  m_GameObject: {fileID: 759366278}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
@@ -70625,13 +71041,23 @@ MonoBehaviour:
   reachHeight: 0.7
   hoverHeight: 0.9
   bobAmount: 0.12
---- !u!114 &345345222
+--- !u!4 &696423783 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2884145024, guid: be299b309135466ab8385b53af011d49, type: 3}
+  m_PrefabInstance: {fileID: 1131986701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &704826969 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7460023374, guid: 8fcd5c16ba1e40b1867a8174608b7e4c, type: 3}
+  m_PrefabInstance: {fileID: 456646286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &716683659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231078224}
+  m_GameObject: {fileID: 1542939279}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
@@ -70644,13 +71070,14 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
---- !u!114 &1585970957
+  attackLow: 0
+--- !u!114 &720550685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231078224}
+  m_GameObject: {fileID: 1107537441}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
@@ -70684,18 +71111,8 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5
---- !u!4 &696423783 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2884145024, guid: be299b309135466ab8385b53af011d49, type: 3}
-  m_PrefabInstance: {fileID: 1131986701}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &704826969 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7460023374, guid: 8fcd5c16ba1e40b1867a8174608b7e4c, type: 3}
-  m_PrefabInstance: {fileID: 456646286}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &728707913
 GameObject:
   m_ObjectHideFlags: 0
@@ -71189,6 +71606,46 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
   m_PrefabInstance: {fileID: 1424107815}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &770163912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552402576}
+  - component: {fileID: 900738608}
+  - component: {fileID: 176297336}
+  - component: {fileID: 1581807140}
+  - component: {fileID: 1165534370}
+  m_Layer: 0
+  m_Name: Wooden Gate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &770557303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461275627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.6
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
 --- !u!4 &772002132
 Transform:
   m_ObjectHideFlags: 0
@@ -71527,6 +71984,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &815433207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460251422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStyle: 0
+  moveSpeed: 1
+  noticeRange: 3.5
+  noticeHeight: 2.5
+  stayNearHome: 1.6
+  attackRange: 0.15
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
 --- !u!1 &818828826
 GameObject:
   m_ObjectHideFlags: 0
@@ -71605,80 +72083,99 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 24}
   m_EdgeRadius: 0
+--- !u!212 &821862987
+SpriteRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679466450}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 1101371759
+  m_SortingLayer: 2
+  m_SortingOrder: 5
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 21300000, guid: ee1ed561c8c9483b89cb7e414cf37655, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.5, y: 1.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!4 &822048765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2070749231621541748, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
   m_PrefabInstance: {fileID: 382947329}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &267465203
+--- !u!114 &826401555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460251422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 15
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 592491201}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &815433207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460251422}
+  m_GameObject: {fileID: 1542939279}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveStyle: 0
-  moveSpeed: 1
-  noticeRange: 3.5
+  moveSpeed: 0.9
+  noticeRange: 4
   noticeHeight: 2.5
-  stayNearHome: 1.6
+  stayNearHome: 3
   attackRange: 0.15
   reachHeight: 0.7
   hoverHeight: 0.9
   bobAmount: 0.12
---- !u!114 &322441350
+--- !u!114 &847587089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460251422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.4
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &1940008686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460251422}
+  m_GameObject: {fileID: 1323355639}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
@@ -71712,7 +72209,7 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5
 --- !u!1 &851433564
 GameObject:
@@ -71903,6 +72400,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!4 &867084022 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6690881965344529813, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
+  m_PrefabInstance: {fileID: 532192409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &891558714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71916,9 +72418,141 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellName: Fireball
+  loseSpellAtHealth: 0.2
+  respawnWhenLost: {fileID: 267465203}
+  keepAfterBeating: {fileID: 369741294}
   pickupDistance: 0.45
   bobAmount: 0.08
   glowSpeed: 3
+--- !u!212 &900738608
+SpriteRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770163912}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 1101371759
+  m_SortingLayer: 2
+  m_SortingOrder: 5
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 21300000, guid: fcd66a1c163840f9b791fd3b46fbadae, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.5, y: 1.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
+--- !u!1001 &903436881
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 867084022}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.178
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
+      propertyPath: m_Name
+      value: Mini Boss Crown
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa6d882f9507ed241a652d5867f0cea2, type: 3}
 --- !u!1 &910084719
 GameObject:
   m_ObjectHideFlags: 0
@@ -72262,6 +72896,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be299b309135466ab8385b53af011d49, type: 3}
+--- !u!114 &917660058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451879531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4261ed9da55fa824190228a673ed7295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellNames:
+  - Fireball
+  sourceCreatures:
+  - 
+  spellUnlocked: 00
 --- !u!1 &917889105
 GameObject:
   m_ObjectHideFlags: 0
@@ -72446,115 +73097,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!4 &938085127 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3288468337185982548, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
-  m_PrefabInstance: {fileID: 1424107815}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1689213878
+--- !u!114 &936641504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403933876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 8
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &102636532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403933876}
+  m_GameObject: {fileID: 1107537441}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveStyle: 0
-  moveSpeed: 1.2
-  noticeRange: 4.5
+  moveSpeed: 0.9
+  noticeRange: 4
   noticeHeight: 2.5
-  stayNearHome: 3.5
+  stayNearHome: 3
   attackRange: 0.15
   reachHeight: 0.7
   hoverHeight: 0.9
   bobAmount: 0.12
---- !u!114 &1896992121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &938085127 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3288468337185982548, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
+  m_PrefabInstance: {fileID: 1424107815}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403933876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.3
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &1481434808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &944114132 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+  m_PrefabInstance: {fileID: 103073231}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403933876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 2
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations:
-  - attack
-  castAnimation: 
-  hurtAnimation: hit
-  defeatAnimation: die
-  idleAnimation: 
-  walkingSetting: isWalking
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 1
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: 2.5
-  fadeTime: 0.5
 --- !u!1 &948563931
 GameObject:
   m_ObjectHideFlags: 0
@@ -72845,6 +73418,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 269806386}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &967536308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451879531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ace65f849229cd48ad78968ba461a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireballPrefab: {fileID: 3369195110237270493, guid: 7e78633fe7b5d3f4da0e8281111b2bda, type: 3}
+  cooldown: 0.6
+  manaCost: 20
+  maxMana: 100
+  manaRegenPerSecond: 10
+  spawnOffset: {x: 0.35, y: -0.2}
+  listenForKeys: 0
+  spawnDelay: 0.5
 --- !u!1 &991207974
 GameObject:
   m_ObjectHideFlags: 0
@@ -73307,6 +73900,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1057114423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186159748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStyle: 0
+  moveSpeed: 0.9
+  noticeRange: 4
+  noticeHeight: 2.5
+  stayNearHome: 3
+  attackRange: 0.15
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
 --- !u!4 &1057442964
 Transform:
   m_ObjectHideFlags: 0
@@ -73719,110 +74333,11 @@ Transform:
   - {fileID: 1143993538}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1338687034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &1121637685 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+  m_PrefabInstance: {fileID: 573273239}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542939279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 6
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &826401555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542939279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStyle: 0
-  moveSpeed: 0.9
-  noticeRange: 4
-  noticeHeight: 2.5
-  stayNearHome: 3
-  attackRange: 0.15
-  reachHeight: 0.7
-  hoverHeight: 0.9
-  bobAmount: 0.12
---- !u!114 &716683659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542939279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.6
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &1355119511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542939279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 2
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations:
-  - attack
-  castAnimation: 
-  hurtAnimation: hit
-  defeatAnimation: die
-  idleAnimation: 
-  walkingSetting: isWalking
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 1
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: 2.5
-  fadeTime: 0.5
 --- !u!1001 &1126998265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74498,6 +75013,89 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1165534370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770163912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 1
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations: []
+  castAnimation: 
+  hurtAnimation: 
+  defeatAnimation: 
+  idleAnimation: 
+  walkingSetting: 
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.75, b: 0.5, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 0
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 1.2
+  defeatedSprite: {fileID: 21300000, guid: 3d6fe5ed149f4071b0e679886a2a0be3, type: 3}
+  turnOffColliders: 1
+  fadeAfter: 1
+  fadeTime: 1
+--- !u!114 &1176204721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461275627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 2
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 0.5
+  fadeTime: 0.5
 --- !u!1 &1186159748 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
@@ -74807,214 +75405,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &674206564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497091625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 6
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &330121454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497091625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStyle: 0
-  moveSpeed: 0.9
-  noticeRange: 4
-  noticeHeight: 2.5
-  stayNearHome: 3
-  attackRange: 0.15
-  reachHeight: 0.7
-  hoverHeight: 0.9
-  bobAmount: 0.12
---- !u!114 &1454472625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497091625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.6
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &1530360571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497091625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 2
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations:
-  - attack
-  castAnimation: 
-  hurtAnimation: hit
-  defeatAnimation: die
-  idleAnimation: 
-  walkingSetting: isWalking
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 1
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: 2.5
-  fadeTime: 0.5
---- !u!114 &1970144955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461275627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 6
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &550303595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461275627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStyle: 0
-  moveSpeed: 0.9
-  noticeRange: 4
-  noticeHeight: 2.5
-  stayNearHome: 3
-  attackRange: 0.15
-  reachHeight: 0.7
-  hoverHeight: 0.9
-  bobAmount: 0.12
---- !u!114 &770557303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461275627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.6
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &1176204721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461275627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 2
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations:
-  - attack
-  castAnimation: 
-  hurtAnimation: hit
-  defeatAnimation: die
-  idleAnimation: 
-  walkingSetting: isWalking
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 1
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: 2.5
-  fadeTime: 0.5
 --- !u!1 &1217789663
 GameObject:
   m_ObjectHideFlags: 0
@@ -75213,6 +75603,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 269806386}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229336507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468166758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 2
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 0.5
+  fadeTime: 0.5
 --- !u!1 &1229883667
 GameObject:
   m_ObjectHideFlags: 0
@@ -75659,56 +76091,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &369741294
+--- !u!114 &1273403477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391334444}
+  m_GameObject: {fileID: 451879531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 20
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1848947516
+  facingStyle: 0
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - AttackDefault1
+  - AttackDefault2
+  castAnimation: AttackCastBall
+  hurtAnimation: 
+  defeatAnimation: DeathAnim
+  idleAnimation: IdleAnim
+  walkingSetting: 
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.4, b: 0.4, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 0
+  showRedFill: 1
+  fillSpeed: 3
+  showHealthNumber: 1
+  showMessages: 1
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: -1
+  fadeTime: 0.5
+--- !u!114 &1273837847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391334444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStyle: 0
-  moveSpeed: 0.9
-  noticeRange: 5
-  noticeHeight: 2.5
-  stayNearHome: 6
-  attackRange: 0.2
-  reachHeight: 0.7
-  hoverHeight: 0.9
-  bobAmount: 0.12
---- !u!114 &1842151473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391334444}
+  m_GameObject: {fileID: 451879531}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
@@ -75717,52 +76149,89 @@ MonoBehaviour:
   damage: 1
   damageType: 0
   reach: 0.45
-  cooldown: 1.8
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &1865658887
+  cooldown: 0.45
+  hitDelay: 0.15
+  pauseAfterHit: 0
+  useKeyboard: 1
+  attackLow: 0
+--- !u!114 &1275274395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391334444}
+  m_GameObject: {fileID: 1107537441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 6
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1277514051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679466450}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  facingStyle: 2
+  facingStyle: 1
   spriteFacesRight: 1
   faceLeftAngle: -90
   faceRightAngle: 90
-  attackAnimations:
-  - attack
+  attackAnimations: []
   castAnimation: 
-  hurtAnimation: hit
-  defeatAnimation: die
+  hurtAnimation: 
+  defeatAnimation: 
   idleAnimation: 
-  walkingSetting: isWalking
+  walkingSetting: 
   idleFrames: []
   walkFrames: []
   attackFrames: []
   hurtFrames: []
   defeatFrames: []
   framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
-  shakeWhenHurt: 0
+  hurtColor: {r: 1, g: 0.75, b: 0.5, a: 1}
+  shakeWhenHurt: 1
   shieldFrames: []
-  showHealthBar: 1
+  showHealthBar: 0
   showRedFill: 0
   fillSpeed: 3
   showHealthNumber: 0
   showMessages: 0
   burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: 2.5
-  fadeTime: 0.5
+  defeatedSprite: {fileID: 21300000, guid: 989db2ff6465404a81d775d4afbc5e8b, type: 3}
+  turnOffColliders: 1
+  fadeAfter: 2
+  fadeTime: 1
 --- !u!1 &1323355639 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
@@ -75874,64 +76343,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 269806386}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &967536308
+--- !u!114 &1338278294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451879531}
+  m_GameObject: {fileID: 468166758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ace65f849229cd48ad78968ba461a67, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireballPrefab: {fileID: 3369195110237270493, guid: 7e78633fe7b5d3f4da0e8281111b2bda, type: 3}
-  cooldown: 0.6
-  manaCost: 20
-  maxMana: 100
-  manaRegenPerSecond: 10
-  spawnOffset: {x: 0.6, y: 0.2}
-  listenForKeys: 0
-  spawnDelay: 0.5
---- !u!114 &917660058
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.6
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
+--- !u!114 &1338687034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451879531}
+  m_GameObject: {fileID: 1542939279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4261ed9da55fa824190228a673ed7295, type: 3}
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellNames:
-  - Fireball
-  sourceCreatures:
-  - 
-  spellUnlocked:
-  - 0
---- !u!114 &529658751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451879531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 703b1e760cba2354eba8f1e818dec042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  castAction: {fileID: 2997236349562526588, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
-  spellOneAction: {fileID: -1770403973892238452, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
-  spellTwoAction: {fileID: 7486165312493694239, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
-  spellThreeAction: {fileID: -3895815793288839552, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
-  scrollAction: {fileID: -3254314117099824288, guid: e0fdcc46182d28648903716d05ef8863, type: 3}
-  spellTracker: {fileID: 917660058}
-  fireballCaster: {fileID: 967536308}
-  rainCaster: {fileID: 0}
+  team: 1
+  maxHealth: 6
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1339732431
 GameObject:
   m_ObjectHideFlags: 0
@@ -76024,6 +76492,114 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1355119511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542939279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 2
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 0.5
+  fadeTime: 0.5
+--- !u!114 &1360058680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323355639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 8
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1001 &1376773458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1713997221}
+    m_Modifications:
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_Name
+      value: Fairy 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
 --- !u!1 &1388201598
 GameObject:
   m_ObjectHideFlags: 0
@@ -76305,6 +76881,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
   m_PrefabInstance: {fileID: 598768670}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1391695971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107537441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.6
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
 --- !u!1 &1397425696
 GameObject:
   m_ObjectHideFlags: 0
@@ -76418,6 +77014,43 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
   m_PrefabInstance: {fileID: 382947329}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1409171741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468166758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 6
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1412695373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7460023374, guid: 8fcd5c16ba1e40b1867a8174608b7e4c, type: 3}
@@ -76732,6 +77365,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1436257385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186159748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 2
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 0.5
+  fadeTime: 0.5
 --- !u!1 &1451585917
 GameObject:
   m_ObjectHideFlags: 0
@@ -76838,6 +77513,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1566651455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1454472625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497091625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.6
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
 --- !u!1 &1456535074
 GameObject:
   m_ObjectHideFlags: 0
@@ -77326,6 +78021,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1481434808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403933876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 2
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 0.5
+  fadeTime: 0.5
 --- !u!1001 &1501801055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77459,6 +78196,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3288468337185982548, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
   m_PrefabInstance: {fileID: 1501801055}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1521279621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759366278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 6
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1525530925
 GameObject:
   m_ObjectHideFlags: 0
@@ -77551,75 +78325,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &1360058680
+--- !u!114 &1530360571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323355639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 8
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1824294692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323355639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStyle: 0
-  moveSpeed: 1.2
-  noticeRange: 4.5
-  noticeHeight: 2.5
-  stayNearHome: 3.5
-  attackRange: 0.15
-  reachHeight: 0.7
-  hoverHeight: 0.9
-  bobAmount: 0.12
---- !u!114 &173240596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323355639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.3
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &847587089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323355639}
+  m_GameObject: {fileID: 497091625}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
@@ -77653,8 +78365,28 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5
+--- !u!114 &1534477855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186159748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.6
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
 --- !u!1 &1539289451
 GameObject:
   m_ObjectHideFlags: 0
@@ -77824,6 +78556,35 @@ Transform:
   - {fileID: 27212735}
   m_Father: {fileID: 1119451617}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1550470206
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1713997221}
+    m_Modifications:
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 46.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+      propertyPath: m_Name
+      value: Fairy 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
 --- !u!1 &1562938045
 GameObject:
   m_ObjectHideFlags: 0
@@ -78051,6 +78812,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4968872607988292219, guid: 78925be475d86164f92d73a589da7cba, type: 3}
   m_PrefabInstance: {fileID: 1954651092}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1581807140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770163912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 2
+  maxHealth: 1
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 1
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 0
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: A wooden gate blocks the way. Fire could burn it.
+  messageWhenHurt: 
+  messageWhenDefeated: The gate catches fire!
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1582929880
 GameObject:
   m_ObjectHideFlags: 0
@@ -78157,6 +78955,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1267635067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1585970957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231078224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 2
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 0.5
+  fadeTime: 0.5
 --- !u!4 &1605029387
 Transform:
   m_ObjectHideFlags: 0
@@ -78285,110 +79125,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1267635067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1409171741
-MonoBehaviour:
+--- !u!1001 &1653359006
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468166758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 6
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &417419690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468166758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStyle: 0
-  moveSpeed: 0.9
-  noticeRange: 4
-  noticeHeight: 2.5
-  stayNearHome: 3
-  attackRange: 0.15
-  reachHeight: 0.7
-  hoverHeight: 0.9
-  bobAmount: 0.12
---- !u!114 &1338278294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468166758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.6
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &1229336507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468166758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 2
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations:
-  - attack
-  castAnimation: 
-  hurtAnimation: hit
-  defeatAnimation: die
-  idleAnimation: 
-  walkingSetting: isWalking
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 1
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: 2.5
-  fadeTime: 0.5
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1717994345}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.178
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+      propertyPath: m_Name
+      value: Boss Crown
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
 --- !u!1001 &1653846452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78547,6 +79352,43 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1689213878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403933876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 8
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1692631824
 GameObject:
   m_ObjectHideFlags: 0
@@ -79121,6 +79963,52 @@ Transform:
   - {fileID: 1887447657}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1715587081
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679466450}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.625}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.5, y: 1.25}
+    newSize: {x: 1.5, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.5, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &1717637768
 GameObject:
   m_ObjectHideFlags: 0
@@ -79213,6 +80101,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!4 &1717994345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6690881965344529813, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
+  m_PrefabInstance: {fileID: 598768670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1726062995
 GameObject:
   m_ObjectHideFlags: 0
@@ -79609,6 +80502,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1764122880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759366278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 2
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 0.5
+  fadeTime: 0.5
 --- !u!1 &1770787288
 GameObject:
   m_ObjectHideFlags: 0
@@ -79701,96 +80636,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1543521066}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &263954304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451879531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 0
-  maxHealth: 20
-  healAmount: 1
-  healDelay: 0.5
-  healDelayInCombat: 3
-  combatTime: 4
-  makeHitBox: 0
-  turnOffWhenDefeated:
-  - {fileID: 451879536}
-  - {fileID: 529658751}
-  - {fileID: 967536308}
-  restartLevelWhenDefeated: 1
-  restartDelay: 3
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1273837847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451879531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.45
-  cooldown: 0.45
-  hitDelay: 0.15
-  pauseAfterHit: 0
-  useKeyboard: 1
---- !u!114 &1273403477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451879531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 0
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations:
-  - AttackDefault1
-  - AttackDefault2
-  castAnimation: AttackCastBall
-  hurtAnimation: 
-  defeatAnimation: DeathAnim
-  idleAnimation: IdleAnim
-  walkingSetting: 
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.4, b: 0.4, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 0
-  showRedFill: 1
-  fillSpeed: 3
-  showHealthNumber: 1
-  showMessages: 1
-  burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: -1
-  fadeTime: 0.5
 --- !u!1 &1782258432
 GameObject:
   m_ObjectHideFlags: 0
@@ -79807,110 +80652,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1521279621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759366278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 6
-  healAmount: 0
-  makeHitBox: 1
-  hitBoxSize: {x: 0, y: 0}
-  hitBoxOffset: {x: 0, y: 0}
-  dropWhenDefeated: {fileID: 0}
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &690370347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759366278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStyle: 0
-  moveSpeed: 0.9
-  noticeRange: 4
-  noticeHeight: 2.5
-  stayNearHome: 3
-  attackRange: 0.15
-  reachHeight: 0.7
-  hoverHeight: 0.9
-  bobAmount: 0.12
---- !u!114 &1965857442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759366278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  damageType: 0
-  reach: 0.4
-  cooldown: 1.6
-  hitDelay: 0.45
-  pauseAfterHit: 0.35
-  useKeyboard: 0
---- !u!114 &1764122880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759366278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 2
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations:
-  - attack
-  castAnimation: 
-  hurtAnimation: hit
-  defeatAnimation: die
-  idleAnimation: 
-  walkingSetting: isWalking
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 1
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 0
-  defeatedSprite: {fileID: 0}
-  turnOffColliders: 0
-  fadeAfter: 2.5
-  fadeTime: 0.5
 --- !u!4 &1796586557
 Transform:
   m_ObjectHideFlags: 0
@@ -80133,6 +80874,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1796586557}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1824294692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323355639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStyle: 0
+  moveSpeed: 1.2
+  noticeRange: 4.5
+  noticeHeight: 2.5
+  stayNearHome: 3.5
+  attackRange: 0.15
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
+--- !u!1 &1827307019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003769655}
+  - component: {fileID: 475907888}
+  - component: {fileID: 1969253552}
+  m_Layer: 0
+  m_Name: Level Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &1834450115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80292,6 +81072,94 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be299b309135466ab8385b53af011d49, type: 3}
+--- !u!114 &1842151473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391334444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.45
+  cooldown: 1.8
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
+--- !u!114 &1848947516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391334444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c290217c79dd465bb17636801b567823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStyle: 0
+  moveSpeed: 0.9
+  noticeRange: 5
+  noticeHeight: 2.5
+  stayNearHome: 6
+  attackRange: 0.2
+  reachHeight: 0.7
+  hoverHeight: 0.9
+  bobAmount: 0.12
+--- !u!4 &1862523220 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a4a4ac5b7bef61046a844f530a4e6121, type: 3}
+  m_PrefabInstance: {fileID: 1653359006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1865658887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391334444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 2
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 0.5
+  fadeTime: 0.5
 --- !u!4 &1875808669 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2884145024, guid: be299b309135466ab8385b53af011d49, type: 3}
@@ -80495,6 +81363,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!4 &1885350792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679466450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 94.25, y: 1, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1713997221}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1886061182
 GameObject:
   m_ObjectHideFlags: 0
@@ -80587,6 +81470,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!4 &1887447657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
+  m_PrefabInstance: {fileID: 1550470206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1896992121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403933876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.3
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
 --- !u!1 &1903319565
 GameObject:
   m_ObjectHideFlags: 0
@@ -80931,6 +81839,48 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1940008686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460251422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingStyle: 2
+  spriteFacesRight: 1
+  faceLeftAngle: -90
+  faceRightAngle: 90
+  attackAnimations:
+  - attack
+  castAnimation: 
+  hurtAnimation: hit
+  defeatAnimation: die
+  idleAnimation: 
+  walkingSetting: isWalking
+  idleFrames: []
+  walkFrames: []
+  attackFrames: []
+  hurtFrames: []
+  defeatFrames: []
+  framesPerSecond: 8
+  hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
+  shakeWhenHurt: 0
+  shieldFrames: []
+  showHealthBar: 1
+  showRedFill: 0
+  fillSpeed: 3
+  showHealthNumber: 0
+  showMessages: 0
+  burnTime: 0
+  defeatedSprite: {fileID: 0}
+  turnOffColliders: 0
+  fadeAfter: 0.5
+  fadeTime: 0.5
 --- !u!1001 &1952099019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81101,6 +82051,82 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78925be475d86164f92d73a589da7cba, type: 3}
+--- !u!114 &1965857442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759366278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageType: 0
+  reach: 0.4
+  cooldown: 1.6
+  hitDelay: 0.45
+  pauseAfterHit: 0.35
+  useKeyboard: 0
+  attackLow: 0
+--- !u!114 &1969253552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827307019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f87cad3e05943b490f6b0da7c588323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelChanger
+  startWhen: 0
+  nextSceneName: Level2_Woods_FireImp
+  fadeSeconds: 0.75
+  bossToDefeat: {fileID: 369741294}
+  lockedMessage: Defeat the Skeleton Boss to move on.
+  titleText: Dragon's Toll
+  promptText: Press any key to start
+--- !u!114 &1970144955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461275627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 6
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1970969664
 GameObject:
   m_ObjectHideFlags: 0
@@ -81329,6 +82355,43 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1982711115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231078224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 6
+  healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
+  makeHitBox: 1
+  hitBoxSize: {x: 0, y: 0}
+  hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
+  dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
+  whenDefeated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1989690231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2884145024, guid: be299b309135466ab8385b53af011d49, type: 3}
@@ -81431,6 +82494,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6774071282, guid: 9e419626194a4e60aeba5bd215ad20cd, type: 3}
   m_PrefabInstance: {fileID: 281325323}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2003769655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827307019}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 99.75, y: 11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2032762351
 GameObject:
   m_ObjectHideFlags: 0
@@ -82103,586 +83181,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!1 &679466450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1885350792}
-  - component: {fileID: 821862987}
-  - component: {fileID: 1715587081}
-  - component: {fileID: 302420609}
-  - component: {fileID: 1277514051}
-  m_Layer: 0
-  m_Name: Boss Cage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1885350792
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679466450}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 94.25, y: 1, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1713997221}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &821862987
-SpriteRenderer:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679466450}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1101371759
-  m_SortingLayer: 2
-  m_SortingOrder: 5
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: ee1ed561c8c9483b89cb7e414cf37655, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.5, y: 1.25}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
-  m_BlendShapeWeights: []
---- !u!61 &1715587081
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679466450}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.625}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.5, y: 1.25}
-  m_EdgeRadius: 0
---- !u!114 &302420609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679466450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 2
-  maxHealth: 6
-  makeHitBox: 0
-  onlyHurtByType: 1
-  onlyHurtBy: 1
-  holding: {fileID: 369741294}
-  messageWhenBlocked: The boss is locked in a cage. Only fire can break it.
-  messageWhenHurt: The cage cracks!
-  messageWhenDefeated: The cage breaks! The boss is free!
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1277514051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679466450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 1
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations: []
-  castAnimation: 
-  hurtAnimation: 
-  defeatAnimation: 
-  idleAnimation: 
-  walkingSetting: 
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.75, b: 0.5, a: 1}
-  shakeWhenHurt: 1
-  shieldFrames: []
-  showHealthBar: 0
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 0
-  defeatedSprite: {fileID: 21300000, guid: 989db2ff6465404a81d775d4afbc5e8b, type: 3}
-  turnOffColliders: 1
-  fadeAfter: 2
-  fadeTime: 1
---- !u!1 &770163912
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 552402576}
-  - component: {fileID: 900738608}
-  - component: {fileID: 176297336}
-  - component: {fileID: 1581807140}
-  - component: {fileID: 1165534370}
-  m_Layer: 0
-  m_Name: Wooden Gate
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &552402576
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770163912}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.7, y: 1, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1713997221}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &900738608
-SpriteRenderer:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770163912}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1101371759
-  m_SortingLayer: 2
-  m_SortingOrder: 5
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: fcd66a1c163840f9b791fd3b46fbadae, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.5, y: 1.25}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
-  m_BlendShapeWeights: []
---- !u!61 &176297336
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770163912}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 1.1875}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.7, y: 2.375}
-  m_EdgeRadius: 0
---- !u!114 &1581807140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770163912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090f47b22ca849a295b4bb8cd537b4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 2
-  maxHealth: 1
-  makeHitBox: 0
-  onlyHurtByType: 1
-  onlyHurtBy: 1
-  messageWhenBlocked: A wooden gate blocks the way. Fire could burn it.
-  messageWhenDefeated: The gate catches fire!
-  whenDefeated:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1165534370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770163912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 880fb046c61441b3adc566147ab4dc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingStyle: 1
-  spriteFacesRight: 1
-  faceLeftAngle: -90
-  faceRightAngle: 90
-  attackAnimations: []
-  castAnimation: 
-  hurtAnimation: 
-  defeatAnimation: 
-  idleAnimation: 
-  walkingSetting: 
-  idleFrames: []
-  walkFrames: []
-  attackFrames: []
-  hurtFrames: []
-  defeatFrames: []
-  framesPerSecond: 8
-  hurtColor: {r: 1, g: 0.75, b: 0.5, a: 1}
-  shakeWhenHurt: 0
-  shieldFrames: []
-  showHealthBar: 0
-  showRedFill: 0
-  fillSpeed: 3
-  showHealthNumber: 0
-  showMessages: 0
-  burnTime: 1.2
-  defeatedSprite: {fileID: 21300000, guid: 3d6fe5ed149f4071b0e679886a2a0be3, type: 3}
-  turnOffColliders: 1
-  fadeAfter: 1
-  fadeTime: 1
---- !u!1001 &103073231
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1713997221}
-    m_Modifications:
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_Name
-      value: Fairy 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
---- !u!4 &944114132 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-  m_PrefabInstance: {fileID: 103073231}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &385861884
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1713997221}
-    m_Modifications:
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 18.0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_Name
-      value: Fairy 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
---- !u!4 &456377647 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-  m_PrefabInstance: {fileID: 385861884}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &573273239
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1713997221}
-    m_Modifications:
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 25.0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_Name
-      value: Fairy 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
---- !u!4 &1121637685 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-  m_PrefabInstance: {fileID: 573273239}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1376773458
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1713997221}
-    m_Modifications:
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 37.0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_Name
-      value: Fairy 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
---- !u!4 &351150601 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-  m_PrefabInstance: {fileID: 1376773458}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1550470206
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1713997221}
-    m_Modifications:
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 46.0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3934276050, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-      propertyPath: m_Name
-      value: Fairy 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
---- !u!4 &1887447657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2884145024, guid: 5b1f0c2e8a7d4e6f9a3b2c1d0e9f8a71, type: 3}
-  m_PrefabInstance: {fileID: 1550470206}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -82693,3 +83191,4 @@ SceneRoots:
   - {fileID: 1119451617}
   - {fileID: 1713997221}
   - {fileID: 472275007}
+  - {fileID: 2003769655}

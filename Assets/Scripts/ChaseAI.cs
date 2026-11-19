@@ -23,6 +23,8 @@ public class ChaseAI : MonoBehaviour
     public float attackRange = 0.15f;
     [Tooltip("A walker cannot reach a target whose feet are above this share of its own height (on a stump).")]
     public float reachHeight = 0.7f;
+    [Tooltip("If the target is this close sideways (right above or below), stand still instead of turning back and forth.")]
+    public float standStillGap = 0.3f;
 
     [Header("Flying only")]
     [Tooltip("How far above the target's feet a flyer likes to be.")]
@@ -131,10 +133,19 @@ public class ChaseAI : MonoBehaviour
             return;
         }
         IsChasing = true;
-        Face(sideDistance > 0f);
+        bool rightUnder = Mathf.Abs(sideDistance) < standStillGap;
+        if (!rightUnder)
+        {
+            Face(sideDistance > 0f);
+        }
 
         if (GapToTarget() > attackRange)
         {
+            if (rightUnder)
+            {
+                SetMoving(false);
+                return;
+            }
             MoveToward(targetCenter);
             return;
         }

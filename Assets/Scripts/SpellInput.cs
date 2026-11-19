@@ -47,10 +47,28 @@ public class SpellInput : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        // Right mouse button: cast the spell picked with the mouse wheel (or keys 1 to 3)
         if (castAction.action.WasPressedThisFrame())
         {
-            Debug.Log("Cast pressed");
             CastSelectedSpell();
+        }
+
+        // B, N and M each cast their own spell: the Level 1, Level 2 and Level 3 spell
+        Keyboard keyboardInput = Keyboard.current;
+        if (keyboardInput != null)
+        {
+            if (keyboardInput.bKey.wasPressedThisFrame)
+            {
+                CastSpellInSlot(0);
+            }
+            if (keyboardInput.nKey.wasPressedThisFrame)
+            {
+                CastSpellInSlot(1);
+            }
+            if (keyboardInput.mKey.wasPressedThisFrame)
+            {
+                CastSpellInSlot(2);
+            }
         }
 
         if (spellOneAction.action.WasPressedThisFrame())
@@ -93,11 +111,28 @@ public class SpellInput : MonoBehaviour
             GameMessage.Show("You have not learned a spell yet. Defeat the mini boss to get one.");
             return;
         }
-        if (selectedSpell == "Fireball" && fireballCaster != null)
+        CastNamedSpell(selectedSpell);
+    }
+
+    // Casts the spell in this slot (0 = Level 1 spell, 1 = Level 2 spell, 2 = Level 3 spell) if it is learned.
+    private void CastSpellInSlot(int spellSlot)
+    {
+        string slotSpell = spellTracker.SpellNameIfUnlocked(spellSlot);
+        if (slotSpell == "")
+        {
+            GameMessage.Show("You have not learned that spell yet.");
+            return;
+        }
+        CastNamedSpell(slotSpell);
+    }
+
+    private void CastNamedSpell(string spellName)
+    {
+        if (spellName == "Fireball" && fireballCaster != null)
         {
             fireballCaster.Cast();
         }
-        else if (selectedSpell == "Rain" && rainCaster != null)
+        else if (spellName == "Rain" && rainCaster != null)
         {
             rainCaster.Cast();
         }

@@ -113,6 +113,7 @@ public class CharacterLooks : MonoBehaviour
             myHealth.WasHurt += WhenHurt;
             myHealth.WasBlocked += WhenBlocked;
             myHealth.WasDefeated += WhenDefeated;
+            myHealth.WasRevived += WhenRevived;
         }
     }
 
@@ -123,6 +124,7 @@ public class CharacterLooks : MonoBehaviour
             myHealth.WasHurt -= WhenHurt;
             myHealth.WasBlocked -= WhenBlocked;
             myHealth.WasDefeated -= WhenDefeated;
+            myHealth.WasRevived -= WhenRevived;
         }
     }
 
@@ -445,6 +447,31 @@ public class CharacterLooks : MonoBehaviour
             modelAnimator.SetBool(walkingSetting, false);
         }
         StartCoroutine(GoAway());
+    }
+
+    // Health brought it back: show it alive again, standing and at full colour.
+    void WhenRevived()
+    {
+        StopAllCoroutines();
+        backToIdle = null;
+        hurtTimer = 0f;
+        if (turnOffColliders)
+        {
+            foreach (Collider2D oneCollider in GetComponentsInChildren<Collider2D>(true))
+            {
+                oneCollider.enabled = true;
+            }
+        }
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = normalColor;
+        }
+        if (modelAnimator != null)
+        {
+            modelAnimator.Rebind();
+            modelAnimator.Update(0f);
+        }
+        PlayFrames(idleFrames, true);
     }
 
     IEnumerator GoAway()

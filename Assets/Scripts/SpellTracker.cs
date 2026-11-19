@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 // Keeps track of which spells the player owns and which one is selected.
@@ -10,6 +11,59 @@ public class SpellTracker : MonoBehaviour
     [SerializeField] private string[] sourceCreatures = { "", "Fire Imp", "Stone Golem" };
     [SerializeField] private bool[] spellUnlocked = { true, false, false };
     private int selectedIndex = 0;
+
+    // Spells the player has won for good (by beating the level's boss). They stay learned in every later level.
+    private static HashSet<string> keptSpells = new HashSet<string>();
+
+    private void Start()
+    {
+        // spells won in earlier levels are already learned here
+        for (int loopIndex = 0; loopIndex < spellNames.Length; loopIndex++)
+        {
+            if (keptSpells.Contains(spellNames[loopIndex]))
+            {
+                spellUnlocked[loopIndex] = true;
+            }
+        }
+        if (HasAnyUnlocked() && !spellUnlocked[selectedIndex])
+        {
+            SelectNextSpell(1);
+        }
+    }
+
+    // The spell is the player's for good: it can no longer be lost and it carries on to the next levels.
+    public void KeepSpell(string spellName)
+    {
+        keptSpells.Add(spellName);
+    }
+
+    public bool IsKept(string spellName)
+    {
+        return keptSpells.Contains(spellName);
+    }
+
+    // The name of the spell in this slot (0, 1 or 2), or "" if there is none or it is still locked.
+    public string SpellNameIfUnlocked(int spellSlot)
+    {
+        if (spellSlot < 0 || spellSlot >= spellNames.Length || !spellUnlocked[spellSlot])
+        {
+            return "";
+        }
+        return spellNames[spellSlot];
+    }
+
+    // Which slot (0, 1 or 2) holds this spell, or -1.
+    public int SlotOf(string spellName)
+    {
+        for (int loopIndex = 0; loopIndex < spellNames.Length; loopIndex++)
+        {
+            if (spellNames[loopIndex] == spellName)
+            {
+                return loopIndex;
+            }
+        }
+        return -1;
+    }
 
     // Called by a creature when it is defeated.
     public void CreatureDefeated(string creatureType)
@@ -50,6 +104,10 @@ public class SpellTracker : MonoBehaviour
     // Called when the player loses a spell (health too low).
     public void LockSpell(string spellName)
     {
+        if (keptSpells.Contains(spellName))
+        {
+            return;   // won for good, it cannot be lost any more
+        }
         for (int loopIndex = 0; loopIndex < spellNames.Length; loopIndex++)
         {
             if (spellNames[loopIndex] == spellName)

@@ -3271,7 +3271,7 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5
 --- !u!1 &251420901
 GameObject:
@@ -5396,7 +5396,7 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5
 --- !u!114 &482238464
 MonoBehaviour:
@@ -5438,7 +5438,7 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5
 --- !u!1 &482328141
 GameObject:
@@ -5545,10 +5545,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellNames:
+  - Fireball
   - Rain
   sourceCreatures:
   - 
-  spellUnlocked: 00y
+  - 
+  spellUnlocked: 0000
 --- !u!1 &489264010
 GameObject:
   m_ObjectHideFlags: 0
@@ -84538,7 +84540,7 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5
 --- !u!1 &804898741
 GameObject:
@@ -86694,10 +86696,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  maxHealth: 20
+  maxHealth: 12
   healAmount: 1
   healDelay: 0.5
-  healDelayInCombat: 3
+  healDelayInCombat: 12
   combatTime: 4
   onlyHurtByType: 0
   onlyHurtBy: 1
@@ -88808,7 +88810,7 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5
 --- !u!1 &1313223368
 GameObject:
@@ -89421,7 +89423,7 @@ MonoBehaviour:
   burnTime: 0
   defeatedSprite: {fileID: 0}
   turnOffColliders: 0
-  fadeAfter: 2.5
+  fadeAfter: 0.5
   fadeTime: 0.5
 --- !u!1 &1357550241
 GameObject:
@@ -89841,7 +89843,7 @@ MonoBehaviour:
   manaCost: 20
   maxMana: 100
   manaRegenPerSecond: 10
-  spawnOffset: {x: 0.6, y: 0.2}
+  spawnOffset: {x: 0.35, y: -0.2}
   listenForKeys: 0
   spawnDelay: 0.5
 --- !u!1 &1389245049
@@ -94089,6 +94091,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellName: Rain
+  respawnWhenLost: {fileID: 650767176}
+  keepAfterBeating: {fileID: 1251475011}
   loseSpellAtHealth: 0.2
   pickupDistance: 0.45
   bobAmount: 0.08
