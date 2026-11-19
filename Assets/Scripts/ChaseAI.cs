@@ -18,6 +18,13 @@ public class ChaseAI : MonoBehaviour
     [Tooltip("Never goes further than this from where it started.")]
     public float stayNearHome = 4f;
 
+    [Header("Ledge & Wall Detection")]
+    [Tooltip("Leave as Nothing to detect any solid Tilemap/collider, or pick your Ground layer.")]
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float ledgeCheckForwardOffset = 0.2f;
+    [SerializeField] private float ledgeCheckDepth = 0.6f;
+    [SerializeField] private float wallCheckDistance = 0.15f;
+
     [Header("Attacking")]
     [Tooltip("Gap between the two bodies (in units) at which it stops and attacks.")]
     public float attackRange = 0.15f;
@@ -52,14 +59,7 @@ public class ChaseAI : MonoBehaviour
         IsChasing = false;
     }
 
-    void Awake()
-    {
-        myHealth = GetComponent<Health>();
-        meleeAttack = GetComponent<MeleeAttack>();
-        myLooks = GetComponent<CharacterLooks>();
-        homePosition = transform.position;
-        bobOffset = Random.Range(0f, 6.28f);
-    }
+   
 
     // The nearest living thing on the other side (Neutral things like gates are never chased).
     Health FindTarget()
@@ -193,7 +193,7 @@ public class ChaseAI : MonoBehaviour
             float wantedHeight = Target.BodyBounds().min.y + hoverHeight + Mathf.Sin(Time.time * 3f + bobOffset) * bobAmount;
             nextPosition.y = Mathf.MoveTowards(transform.position.y, wantedHeight, stepSize);
         }
-        else if (WallAhead(sideDirection))
+        else if (WallAhead(sideDirection) || !HasGroundAhead(sideDirection))
         {
             SetMoving(false);
             return;
@@ -223,33 +223,80 @@ public class ChaseAI : MonoBehaviour
             return;
         }
         Face(homeDistance > 0f);
+        float homeDirection = Mathf.Sign(homeDistance);
+        if (moveStyle == MoveStyle.Walk && (WallAhead(homeDirection) || !HasGroundAhead(homeDirection)))
+        {
+            SetMoving(false);
+            return;
+        }
         float stepSize = moveSpeed * 0.6f * Time.deltaTime;
         Vector3 nextPosition = transform.position;
         nextPosition.x = Mathf.MoveTowards(nextPosition.x, homePosition.x, stepSize);
         if (moveStyle == MoveStyle.Fly)
         {
-            nextPosition.y = Mathf.MoveTowards(nextPosition.y, homePosition.y, stepSize);
+            nextPosition.y = Mathf.MoveTowards(transform.position.y, homePosition.y, stepSize);
         }
         transform.position = nextPosition;
         SetMoving(true);
     }
 
-    // Walkers stop at walls: tree trunks, gates, cages, anything solid that is not a character.
-    // The check starts at the middle of the body (always in the open) because a trunk's
-    // collider is only an outline, and a check that started inside one would not see it.
+    // Walkers stop at walls: tilemaps, tree trunks, gates, cages, anything solid that is not a character.
     bool WallAhead(float sideDirection)
     {
         Bounds myBox = MyBox();
-        float lookDistance = Mathf.Min(myBox.extents.x, 0.2f) + 0.08f;
-        Vector2 rayStart = new Vector2(myBox.center.x, myBox.min.y + 0.1f);
-        foreach (RaycastHit2D wallHit in Physics2D.RaycastAll(rayStart, new Vector2(sideDirection, 0f), lookDistance))
+        float lookDistance = myBox.extents.x + wallCheckDistance;
+        Vector2 lowStart = new Vector2(myBox.center.x, myBox.min.y + 0.15f);
+        Vector2 midStart = new Vector2(myBox.center.x, myBox.center.y);
+
+        return HitsWall(lowStart, sideDirection, lookDistance) || HitsWall(midStart, sideDirection, lookDistance);
+    }
+
+    bool HitsWall(Vector2 rayStart, float sideDirection, float lookDistance)
+    {
+        RaycastHit2D[] hits = groundLayer.value != 0
+            ? Physics2D.RaycastAll(rayStart, new Vector2(sideDirection, 0f), lookDistance, groundLayer)
+            : Physics2D.RaycastAll(rayStart, new Vector2(sideDirection, 0f), lookDistance);
+
+        foreach (RaycastHit2D wallHit in hits)
         {
             Collider2D hitCollider = wallHit.collider;
+            if (hitCollider == null || hitCollider.isTrigger || hitCollider.transform.IsChildOf(transform))
+            {
+                continue;
+            }
+            if (Target != null && hitCollider == Target.Body)
+            {
+                continue;
+            }
             if (hitCollider.GetComponentInParent<Tilemap>() != null)
             {
                 return true;
             }
-            if (hitCollider.isTrigger || hitCollider.transform.IsChildOf(transform))
+            return true;
+        }
+        return false;
+    }
+
+    // Returns true if there is solid ground slightly ahead of the walker's front foot.
+    bool HasGroundAhead(float sideDirection)
+    {
+        if (Mathf.Approximately(sideDirection, 0f)) return true;
+
+        Bounds myBox = MyBox();
+        float dir = Mathf.Sign(sideDirection);
+        Vector2 rayStart = new Vector2(
+    transform.position.x + dir * ledgeCheckForwardOffset,
+    myBox.min.y + 0.15f
+);
+
+        RaycastHit2D[] hits = groundLayer.value != 0
+            ? Physics2D.RaycastAll(rayStart, Vector2.down, ledgeCheckDepth, groundLayer)
+            : Physics2D.RaycastAll(rayStart, Vector2.down, ledgeCheckDepth);
+
+        foreach (RaycastHit2D groundHit in hits)
+        {
+            Collider2D hitCollider = groundHit.collider;
+            if (hitCollider == null || hitCollider.isTrigger || hitCollider.transform.IsChildOf(transform))
             {
                 continue;
             }
@@ -276,5 +323,50 @@ public class ChaseAI : MonoBehaviour
         {
             myLooks.SetMoving(isMoving);
         }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (moveStyle != MoveStyle.Walk) return;
+
+        Bounds box = Application.isPlaying
+            ? MyBox()
+            : new Bounds(transform.position + Vector3.up * 0.25f, new Vector3(0.4f, 0.5f, 0.1f));
+
+        foreach (float dir in new float[] { -1f, 1f })
+        {
+            // Yellow = ledge check
+            Gizmos.color = Color.yellow;
+            Vector3 ledgeOrigin = new Vector3(
+    transform.position.x + dir * ledgeCheckForwardOffset,
+    box.min.y + 0.15f,
+    0f
+);
+            Gizmos.DrawLine(ledgeOrigin, ledgeOrigin + Vector3.down * ledgeCheckDepth);
+
+            // Red = wall check
+            Gizmos.color = Color.red;
+            float lookDistance = box.extents.x + wallCheckDistance;
+            Vector3 wallOrigin = new Vector3(box.center.x, box.center.y, 0f);
+            Gizmos.DrawLine(wallOrigin, wallOrigin + Vector3.right * dir * lookDistance);
+        }
+    }
+    void Reset()
+    {
+        groundLayer = LayerMask.GetMask("Ground");
+    }
+
+    void Awake()
+    {
+        if (groundLayer.value == 0)
+        {
+            groundLayer = LayerMask.GetMask("Ground");
+        }
+
+        myHealth = GetComponent<Health>();
+        meleeAttack = GetComponent<MeleeAttack>();
+        myLooks = GetComponent<CharacterLooks>();
+        homePosition = transform.position;
+        bobOffset = Random.Range(0f, 6.28f);
     }
 }
