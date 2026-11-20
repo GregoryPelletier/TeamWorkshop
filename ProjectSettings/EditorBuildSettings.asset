@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2_Woods_FireImp.unity
     guid: 365ebf96836bdfa459862a0512ed1ba0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level3_Woods_StoneGolem.unity
     guid: 7a72431770ec4672926efca45985401b
   m_configObjects:

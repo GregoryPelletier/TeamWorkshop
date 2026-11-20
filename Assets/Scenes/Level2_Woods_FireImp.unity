@@ -5546,7 +5546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellNames:
   - Fireball
-  - Rain
+  - Thunderstorm
   sourceCreatures:
   - 
   - 
@@ -7215,6 +7215,7 @@ GameObject:
   - component: {fileID: 630075756}
   - component: {fileID: 630075758}
   - component: {fileID: 630075757}
+  - component: {fileID: 1846200102}
   m_Layer: 3
   m_Name: ForestMap
   m_TagString: Untagged
@@ -7222,6 +7223,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1846200102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630075752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1e0d7a3c9f4e2a8d6b4f1c2e7a9b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  branchTiles:
+  - {fileID: 11400000, guid: 7cfd15b88182b144fb5ca38cd873ab38, type: 2}
+  - {fileID: 11400000, guid: c8333b967d8f8a14abe3e6fa6359fcba, type: 2}
+  - {fileID: 11400000, guid: aef977185b0dff74a8071a842ae62b2a, type: 2}
 --- !u!4 &630075753
 Transform:
   m_ObjectHideFlags: 0
@@ -7302,6 +7319,86 @@ Tilemap:
   m_GameObject: {fileID: 630075752}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: 319, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 22
+      m_TileSpriteIndex: 22
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 318, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 19
+      m_TileSpriteIndex: 19
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 319, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 318, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 131, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 22
+      m_TileSpriteIndex: 22
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 130, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 19
+      m_TileSpriteIndex: 19
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 131, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 130, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -36, y: -9, z: 0}
     second:
       serializedVersion: 2
@@ -77382,36 +77479,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 423, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 16
-      m_TileSpriteIndex: 16
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 424, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 16
-      m_TileSpriteIndex: 16
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 425, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 27, y: 7, z: 0}
     second:
       serializedVersion: 2
@@ -79122,26 +79189,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 423, y: 9, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 16
-      m_TileSpriteIndex: 16
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 424, y: 9, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 30, y: 10, z: 0}
     second:
       serializedVersion: 2
@@ -80342,16 +80389,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 423, y: 12, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 15
-      m_TileSpriteIndex: 15
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 84, y: 13, z: 0}
     second:
       serializedVersion: 2
@@ -80514,10 +80551,10 @@ Tilemap:
     m_RefCount: 1
     m_Data: {fileID: 11400000, guid: ccae6ff322884248990edb95fe58ca7c, type: 2}
   - serializedVersion: 2
-    m_RefCount: 118
+    m_RefCount: 120
     m_Data: {fileID: 11400000, guid: 0ea033c555a94d83ab6dae4222e57725, type: 2}
   - serializedVersion: 2
-    m_RefCount: 111
+    m_RefCount: 113
     m_Data: {fileID: 11400000, guid: da93fd71bab14515bff52b4a6e44ab32, type: 2}
   - serializedVersion: 2
     m_RefCount: 130
@@ -80550,10 +80587,10 @@ Tilemap:
     m_RefCount: 28
     m_Data: {fileID: 11400000, guid: 798e7560dd574e0a89657c037c0224f2, type: 2}
   - serializedVersion: 2
-    m_RefCount: 28
+    m_RefCount: 25
     m_Data: {fileID: 11400000, guid: 4831d8f625cf452780e18f9d4bf04d41, type: 2}
   - serializedVersion: 2
-    m_RefCount: 44
+    m_RefCount: 41
     m_Data: {fileID: 11400000, guid: bcb519a1936140e3a0591590b896ed35, type: 2}
   - serializedVersion: 2
     m_RefCount: 4
@@ -80562,7 +80599,7 @@ Tilemap:
     m_RefCount: 4
     m_Data: {fileID: 11400000, guid: a32ee01859c1400895c7464bec6b109f, type: 2}
   - serializedVersion: 2
-    m_RefCount: 29
+    m_RefCount: 31
     m_Data: {fileID: 11400000, guid: 7eb68f8c06d54368b49697052e015fb3, type: 2}
   - serializedVersion: 2
     m_RefCount: 4
@@ -80571,7 +80608,7 @@ Tilemap:
     m_RefCount: 28
     m_Data: {fileID: 11400000, guid: 6f0a732cf23046b9bd8c12df89471a61, type: 2}
   - serializedVersion: 2
-    m_RefCount: 29
+    m_RefCount: 31
     m_Data: {fileID: 11400000, guid: b3eb029a8dd04f3e8978a7be0cf4ab05, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
@@ -80584,10 +80621,10 @@ Tilemap:
     m_RefCount: 1
     m_Data: {fileID: 1127185699, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
-    m_RefCount: 118
+    m_RefCount: 120
     m_Data: {fileID: 1830132956, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
-    m_RefCount: 111
+    m_RefCount: 113
     m_Data: {fileID: 1405475804, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
     m_RefCount: 130
@@ -80620,10 +80657,10 @@ Tilemap:
     m_RefCount: 28
     m_Data: {fileID: 598983383, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
-    m_RefCount: 28
+    m_RefCount: 25
     m_Data: {fileID: -1337734130, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
-    m_RefCount: 44
+    m_RefCount: 41
     m_Data: {fileID: 1430007594, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
     m_RefCount: 4
@@ -80632,7 +80669,7 @@ Tilemap:
     m_RefCount: 4
     m_Data: {fileID: 564926630, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
-    m_RefCount: 29
+    m_RefCount: 31
     m_Data: {fileID: -543475213, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
     m_RefCount: 4
@@ -80641,11 +80678,11 @@ Tilemap:
     m_RefCount: 28
     m_Data: {fileID: -1906478653, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
-    m_RefCount: 29
+    m_RefCount: 31
     m_Data: {fileID: 310247159, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 7320
+    m_RefCount: 7322
     m_Data:
       e00: 1
       e01: 0
@@ -80665,7 +80702,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 7320
+    m_RefCount: 7322
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -86698,7 +86735,7 @@ MonoBehaviour:
   team: 0
   maxHealth: 12
   healAmount: 1
-  healDelay: 0.5
+  healDelay: 0.25
   healDelayInCombat: 12
   combatTime: 4
   onlyHurtByType: 0
@@ -87589,7 +87626,7 @@ GameObject:
   - component: {fileID: 1489847499}
   - component: {fileID: 1946837192}
   m_Layer: 0
-  m_Name: Rain Spell
+  m_Name: Thunderstorm Spell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88189,7 +88226,7 @@ MonoBehaviour:
   makeHitBox: 1
   hitBoxSize: {x: 0, y: 0}
   hitBoxOffset: {x: 0, y: 0}
-  messageWhenBlocked: Its flames are too hot! Put them out with Rain (B).
+  messageWhenBlocked: Its flames are too hot! Put them out with the Thunderstorm (N).
   messageWhenHurt: 
   messageWhenDefeated: 
   dropWhenDefeated: {fileID: 0}
@@ -94090,7 +94127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83b523a422648aaadf5d6ad60e59626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellName: Rain
+  spellName: Thunderstorm
   respawnWhenLost: {fileID: 650767176}
   keepAfterBeating: {fileID: 1251475011}
   loseSpellAtHealth: 0.2

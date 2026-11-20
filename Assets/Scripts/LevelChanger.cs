@@ -109,10 +109,11 @@ public class LevelChanger : MonoBehaviour
         GUIStyle promptStyle = new GUIStyle(titleStyle);
         promptStyle.fontSize = Mathf.RoundToInt(Screen.height * 0.045f);
         promptStyle.fontStyle = FontStyle.Normal;
-        promptStyle.normal.textColor = new Color(1f, 1f, 1f, 0.6f + 0.4f * Mathf.Sin(Time.time * 3f));
+        promptStyle.normal.textColor = new Color(1f, 1f, 1f, 0.75f + 0.25f * Mathf.Sin(Time.time * 3f));
 
-        GUI.Label(new Rect(0f, Screen.height * 0.25f, Screen.width, Screen.height * 0.2f), titleText, titleStyle);
-        GUI.Label(new Rect(0f, Screen.height * 0.55f, Screen.width, Screen.height * 0.1f), promptText, promptStyle);
+        // drawn with a black outline so they stand out on any background (see ScreenText)
+        ScreenText.Draw(new Rect(0f, Screen.height * 0.25f, Screen.width, Screen.height * 0.2f), titleText, titleStyle.fontSize, TextAnchor.MiddleCenter, titleStyle.normal.textColor, false);
+        ScreenText.Draw(new Rect(0f, Screen.height * 0.55f, Screen.width, Screen.height * 0.1f), promptText, promptStyle.fontSize, TextAnchor.MiddleCenter, promptStyle.normal.textColor, true);
     }
 }
 

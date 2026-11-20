@@ -1945,7 +1945,7 @@ MonoBehaviour:
   team: 0
   maxHealth: 12
   healAmount: 1
-  healDelay: 0.5
+  healDelay: 0.25
   healDelayInCombat: 12
   combatTime: 4
   onlyHurtByType: 0
@@ -6491,6 +6491,7 @@ GameObject:
   - component: {fileID: 630075756}
   - component: {fileID: 630075758}
   - component: {fileID: 630075757}
+  - component: {fileID: 1846200101}
   m_Layer: 3
   m_Name: ForestMap
   m_TagString: Untagged
@@ -6498,6 +6499,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1846200101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630075752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1e0d7a3c9f4e2a8d6b4f1c2e7a9b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  branchTiles:
+  - {fileID: 11400000, guid: 7cfd15b88182b144fb5ca38cd873ab38, type: 2}
+  - {fileID: 11400000, guid: c8333b967d8f8a14abe3e6fa6359fcba, type: 2}
+  - {fileID: 11400000, guid: aef977185b0dff74a8071a842ae62b2a, type: 2}
 --- !u!4 &630075753
 Transform:
   m_ObjectHideFlags: 0

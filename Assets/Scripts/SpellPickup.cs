@@ -7,7 +7,7 @@ using UnityEngine;
 // without it, the orb comes back to where it was found.
 public class SpellPickup : MonoBehaviour
 {
-    [Tooltip("The spell you learn, exactly as it is named in the player's SpellTracker (for example Fireball or Rain).")]
+    [Tooltip("The spell you learn, exactly as it is named in the player's SpellTracker (for example Fireball or Thunderstorm).")]
     public string spellName = "Fireball";
     [Tooltip("Lose the spell when the player's health drops to this share (0.2 = 20%). 0 = never.")]
     public float loseSpellAtHealth = 0.2f;

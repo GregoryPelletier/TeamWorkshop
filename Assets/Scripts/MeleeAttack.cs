@@ -29,6 +29,10 @@ public class MeleeAttack : MonoBehaviour
 
     public bool IsAttacking { get; private set; }
 
+    // The player cannot start a staff attack or a spell before this time.
+    // Spells use it too, so switching between the staff and a spell is no faster than one of them.
+    public float BusyUntil { get; private set; }
+
     Health myHealth;
     CharacterLooks myLooks;
     float nextAttackTime;
@@ -58,7 +62,7 @@ public class MeleeAttack : MonoBehaviour
     // Starts an attack if the cooldown is over. Returns true if it started.
     public bool TryAttack()
     {
-        if (Time.time < nextAttackTime || IsAttacking)
+        if (Time.time < nextAttackTime || IsAttacking || !FreeToAct())
         {
             return false;
         }
@@ -67,12 +71,25 @@ public class MeleeAttack : MonoBehaviour
             return false;
         }
         nextAttackTime = Time.time + cooldown;
+        BusyFor(cooldown);
         if (myLooks != null)
         {
             myLooks.PlayAttack();
         }
         StartCoroutine(SwingLands());
         return true;
+    }
+
+    // True when no staff attack or spell is still going.
+    public bool FreeToAct()
+    {
+        return Time.time >= BusyUntil;
+    }
+
+    // Blocks new staff attacks and spells for a number of seconds (spells call this when cast).
+    public void BusyFor(float busySeconds)
+    {
+        BusyUntil = Mathf.Max(BusyUntil, Time.time + busySeconds);
     }
 
     float FacingDirection()

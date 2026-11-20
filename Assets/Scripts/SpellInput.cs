@@ -132,7 +132,7 @@ public class SpellInput : MonoBehaviour
         {
             fireballCaster.Cast();
         }
-        else if (spellName == "Rain" && rainCaster != null)
+        else if ((spellName == "Thunderstorm" || spellName == "Rain") && rainCaster != null)
         {
             rainCaster.Cast();
         }

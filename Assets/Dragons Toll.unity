@@ -14758,7 +14758,7 @@ MonoBehaviour:
   bossToDefeat: {fileID: 0}
   lockedMessage: Defeat the boss to move on.
   titleText: "Dragon's Toll"
-  promptText: Press any key to start
+  promptText: Click or press any key to start
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

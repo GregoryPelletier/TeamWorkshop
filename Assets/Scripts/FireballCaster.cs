@@ -7,6 +7,8 @@ public class FireballCaster : MonoBehaviour
 {
     public GameObject fireballPrefab;
     public float cooldown = 0.6f;
+    [Tooltip("Seconds after casting before the player can attack with the staff or cast again.")]
+    public float castLockTime = 0.6f;
     public float manaCost = 20f;
     public float maxMana = 100f;
     public float manaRegenPerSecond = 10f;
@@ -85,9 +87,19 @@ public class FireballCaster : MonoBehaviour
         {
             return;
         }
+        // no casting in the middle of a staff attack (stops switching between the two to attack faster)
+        MeleeAttack staffAttack = GetComponent<MeleeAttack>();
+        if (staffAttack != null && !staffAttack.FreeToAct())
+        {
+            return;
+        }
 
         Mana -= manaCost;
         nextCastTime = Time.time + cooldown;
+        if (staffAttack != null)
+        {
+            staffAttack.BusyFor(castLockTime);
+        }
 
         // Only use the Cast trigger if the Animator has one (CharacterLooks shows the cast pose otherwise).
         if (castAnimator != null)

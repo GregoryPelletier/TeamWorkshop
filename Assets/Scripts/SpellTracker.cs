@@ -189,7 +189,10 @@ public class SpellTracker : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.skin.label.fontSize = 28;
+        // big enough to read on any screen, with an outline and a dark panel (see ScreenText)
+        int spellSize = ScreenText.SizeFor(0.04f);
+        float screenMargin = Screen.height * 0.025f;
+        float lineHeight = spellSize * 1.55f;
 
         for (int loopIndex = 0; loopIndex < spellNames.Length; loopIndex++)
         {
@@ -206,7 +209,17 @@ public class SpellTracker : MonoBehaviour
             }
 
             string labelText = linePrefix + spellNames[loopIndex] + " " + spellStatus;
-            GUI.Label(new Rect(20, 20 + loopIndex * 35, 500, 35), labelText);
+            Color lineColor = new Color(0.75f, 0.75f, 0.75f);
+            if (spellUnlocked[loopIndex])
+            {
+                lineColor = Color.white;
+            }
+            if (loopIndex == selectedIndex)
+            {
+                lineColor = new Color(1f, 0.85f, 0.3f);
+            }
+            Rect lineArea = new Rect(screenMargin, screenMargin + loopIndex * lineHeight, Screen.width * 0.5f, lineHeight);
+            ScreenText.Draw(lineArea, labelText, spellSize, TextAnchor.MiddleLeft, lineColor, true);
         }
     }
 }

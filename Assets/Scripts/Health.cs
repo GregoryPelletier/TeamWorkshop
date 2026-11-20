@@ -47,6 +47,8 @@ public class Health : MonoBehaviour
     public float healDelayInCombat = 3f;
     [Tooltip("Counts as in combat for this many seconds after being hurt (and while an enemy is chasing it).")]
     public float combatTime = 4f;
+    [Tooltip("An enemy chasing this only counts as combat while it is this close (in units).")]
+    public float chaserCombatRange = 3f;
 
     [Header("What can hurt it")]
     [Tooltip("Tick to let only one kind of damage count, for example Fire for a wooden gate.")]
@@ -173,7 +175,11 @@ public class Health : MonoBehaviour
         {
             if (oneChaser.IsChasing && oneChaser.Target == this)
             {
-                combatNow = true;
+                float chaserGap = Mathf.Abs(oneChaser.transform.position.x - transform.position.x);
+                if (chaserGap <= chaserCombatRange)
+                {
+                    combatNow = true;
+                }
             }
         }
         return combatNow;

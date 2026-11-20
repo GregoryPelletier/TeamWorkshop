@@ -2,22 +2,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-// Attach to the Player, next to FireballCaster. SpellInput calls Cast() when Rain is the selected spell.
-// A raincloud appears in front of the player and rains for a few seconds. Every half second,
-// everything under it takes the damage as Water, which also puts out a fire boss's flames.
+// The Thunderstorm spell. Attach to the Player, next to FireballCaster.
+// SpellInput calls Cast() when Thunderstorm is the selected spell.
+// A dark storm cloud appears in front of the player. While it rains, everything under it
+// takes Water damage every half second (which also puts out a fire boss's flames),
+// and bolts of lightning strike the enemies below it.
 public class RainCaster : MonoBehaviour
 {
     public Sprite cloudSprite;
     public Sprite dropSprite;
     public float cooldown = 4f;
-    [Tooltip("Seconds it rains.")]
+    [Tooltip("Seconds after casting before the player can attack with the staff or cast again.")]
+    public float castLockTime = 0.6f;
+    [Tooltip("Seconds the storm lasts.")]
     public float duration = 2.5f;
+    [Tooltip("Water damage from the rain, every half second.")]
     public int damage = 1;
     [Tooltip("How far in front of the player the cloud appears.")]
     public float cloudDistance = 1.1f;
     [Tooltip("How high above the player's feet the cloud floats.")]
     public float cloudHeight = 1.5f;
     public float cloudWidth = 1.4f;
+    public Color cloudColor = new Color(0.42f, 0.42f, 0.52f, 1f);
+
+    [Header("Lightning")]
+    [Tooltip("Seconds between lightning strikes.")]
+    public float lightningEvery = 0.6f;
+    [Tooltip("Damage from each lightning strike.")]
+    public int lightningDamage = 1;
+    public Color lightningColor = new Color(1f, 0.97f, 0.65f, 1f);
+    [Tooltip("How strongly the screen flashes white with each strike (0 = no flash).")]
+    public float screenFlash = 0.25f;
 
     float nextCastTime;
     Health casterHealth;
@@ -39,7 +54,17 @@ public class RainCaster : MonoBehaviour
         {
             return;
         }
+        // no casting in the middle of a staff attack (stops switching between the two to attack faster)
+        MeleeAttack staffAttack = GetComponent<MeleeAttack>();
+        if (staffAttack != null && !staffAttack.FreeToAct())
+        {
+            return;
+        }
         nextCastTime = Time.time + cooldown;
+        if (staffAttack != null)
+        {
+            staffAttack.BusyFor(castLockTime);
+        }
 
         Bounds casterBox = casterHealth != null ? casterHealth.BodyBounds() : new Bounds(transform.position, Vector3.one * 0.5f);
         float facingDirection = casterLooks != null ? casterLooks.FacingDirection() : (transform.localScale.x < 0f ? -1f : 1f);
@@ -56,10 +81,11 @@ public class RainCaster : MonoBehaviour
             }
         }
 
-        GameObject cloudObject = new GameObject("Rain Cloud");
+        GameObject cloudObject = new GameObject("Storm Cloud");
         cloudObject.transform.position = cloudPoint;
         SpriteRenderer cloudRenderer = cloudObject.AddComponent<SpriteRenderer>();
         cloudRenderer.sprite = cloudSprite;
+        cloudRenderer.color = cloudColor;
         SpriteRenderer casterSprite = GetComponent<SpriteRenderer>();
         if (casterSprite != null)
         {
@@ -75,7 +101,7 @@ public class RainCaster : MonoBehaviour
     }
 }
 
-// The cloud once it has been cast (made by RainCaster, never placed by hand).
+// The storm cloud once it has been cast (made by RainCaster, never placed by hand).
 public class RainCloud : MonoBehaviour
 {
     RainCaster myCaster;
@@ -84,8 +110,12 @@ public class RainCloud : MonoBehaviour
     float rainTimer;
     float hitTimer = 0.2f;
     float dropTimer;
+    float lightningTimer = 0.25f;
+    float flashTimer;
     SpriteRenderer cloudRenderer;
     List<Transform> fallingDrops = new List<Transform>();
+    LineRenderer boltLine;
+    static Material boltMaterial;
 
     public void Launch(RainCaster fromCaster, Team fromTeam, float groundBelow)
     {
@@ -93,6 +123,7 @@ public class RainCloud : MonoBehaviour
         casterTeam = fromTeam;
         groundHeight = groundBelow;
         cloudRenderer = GetComponent<SpriteRenderer>();
+        MakeBoltLine();
     }
 
     void Update()
@@ -103,6 +134,7 @@ public class RainCloud : MonoBehaviour
             return;
         }
         rainTimer += Time.deltaTime;
+        flashTimer -= Time.deltaTime;
         bool stillRaining = rainTimer <= myCaster.duration;
         if (stillRaining)
         {
@@ -113,15 +145,24 @@ public class RainCloud : MonoBehaviour
                 hitTimer = 0.5f;
                 HitEverythingBelow();
             }
+            lightningTimer -= Time.deltaTime;
+            if (lightningTimer <= 0f)
+            {
+                lightningTimer = myCaster.lightningEvery;
+                StrikeLightning();
+            }
         }
         MoveDrops();
+        ShowFlash();
         if (stillRaining)
         {
             return;
         }
-        // the rain has stopped: fade the cloud out, then remove it
+        // the storm has stopped: fade the cloud out, then remove it
         float fadeAmount = 1f - (rainTimer - myCaster.duration) / 0.6f;
-        cloudRenderer.color = new Color(1f, 1f, 1f, Mathf.Clamp01(fadeAmount));
+        Color fadeColor = myCaster.cloudColor;
+        fadeColor.a = Mathf.Clamp01(fadeAmount);
+        cloudRenderer.color = fadeColor;
         if (fadeAmount <= 0f && fallingDrops.Count == 0)
         {
             Destroy(gameObject);
@@ -134,7 +175,7 @@ public class RainCloud : MonoBehaviour
         {
             return;
         }
-        dropTimer += Time.deltaTime * 45f;
+        dropTimer += Time.deltaTime * 70f;
         while (dropTimer >= 1f)
         {
             dropTimer -= 1f;
@@ -153,7 +194,7 @@ public class RainCloud : MonoBehaviour
         for (int dropNumber = fallingDrops.Count - 1; dropNumber >= 0; dropNumber--)
         {
             Transform oneDrop = fallingDrops[dropNumber];
-            oneDrop.position += Vector3.down * 7f * Time.deltaTime;
+            oneDrop.position += new Vector3(-1.2f, -9f, 0f) * Time.deltaTime;
             if (oneDrop.position.y <= groundHeight)
             {
                 Destroy(oneDrop.gameObject);
@@ -162,19 +203,124 @@ public class RainCloud : MonoBehaviour
         }
     }
 
-    void HitEverythingBelow()
+    // Everything under the cloud that the caster's side can hurt.
+    List<Health> TargetsBelow()
     {
         float boxHeight = Mathf.Max(0.2f, transform.position.y - groundHeight);
         Vector2 boxCenter = new Vector2(transform.position.x, groundHeight + boxHeight / 2f);
-        HashSet<Health> alreadyHit = new HashSet<Health>();
+        List<Health> foundTargets = new List<Health>();
         foreach (Collider2D touchedCollider in Physics2D.OverlapBoxAll(boxCenter, new Vector2(myCaster.cloudWidth, boxHeight), 0f))
         {
             Health touchedHealth = touchedCollider.GetComponentInParent<Health>();
-            if (touchedHealth != null && alreadyHit.Add(touchedHealth))
+            if (touchedHealth != null && !foundTargets.Contains(touchedHealth))
             {
-                touchedHealth.TakeDamage(myCaster.damage, DamageType.Water, casterTeam);
+                foundTargets.Add(touchedHealth);
             }
         }
+        return foundTargets;
+    }
+
+    void HitEverythingBelow()
+    {
+        foreach (Health oneTarget in TargetsBelow())
+        {
+            oneTarget.TakeDamage(myCaster.damage, DamageType.Water, casterTeam);
+        }
+    }
+
+    // A bolt strikes an enemy under the cloud, or a random spot on the ground if there is none.
+    void StrikeLightning()
+    {
+        Health struckTarget = null;
+        foreach (Health oneTarget in TargetsBelow())
+        {
+            if (!oneTarget.IsDefeated && oneTarget.team != casterTeam && oneTarget.team != Team.Neutral)
+            {
+                struckTarget = oneTarget;
+                break;
+            }
+        }
+        float strikeX = transform.position.x + Random.Range(-myCaster.cloudWidth / 2f, myCaster.cloudWidth / 2f);
+        float strikeBottom = groundHeight;
+        if (struckTarget != null)
+        {
+            Bounds targetBox = struckTarget.BodyBounds();
+            strikeX = targetBox.center.x;
+            strikeBottom = targetBox.center.y;
+            struckTarget.TakeDamage(myCaster.lightningDamage, DamageType.Physical, casterTeam);
+        }
+        DrawBolt(strikeX, strikeBottom);
+        flashTimer = 0.15f;
+    }
+
+    void MakeBoltLine()
+    {
+        GameObject boltObject = new GameObject("Lightning Bolt");
+        boltObject.transform.SetParent(transform, false);
+        boltLine = boltObject.AddComponent<LineRenderer>();
+        if (boltMaterial == null)
+        {
+            boltMaterial = new Material(Shader.Find("Sprites/Default"));
+        }
+        boltLine.material = boltMaterial;
+        boltLine.startWidth = 0.07f;
+        boltLine.endWidth = 0.03f;
+        boltLine.startColor = myCaster.lightningColor;
+        boltLine.endColor = myCaster.lightningColor;
+        boltLine.useWorldSpace = true;
+        boltLine.sortingLayerID = cloudRenderer.sortingLayerID;
+        boltLine.sortingOrder = cloudRenderer.sortingOrder + 1;
+        boltLine.enabled = false;
+    }
+
+    // A jagged line from the bottom of the cloud down to the strike point.
+    void DrawBolt(float strikeX, float strikeBottom)
+    {
+        float boltTop = transform.position.y - 0.15f;
+        int pointCount = 7;
+        boltLine.positionCount = pointCount;
+        for (int pointNumber = 0; pointNumber < pointCount; pointNumber++)
+        {
+            float pointShare = pointNumber / (float)(pointCount - 1);
+            float pointX = Mathf.Lerp(transform.position.x, strikeX, pointShare);
+            if (pointNumber > 0 && pointNumber < pointCount - 1)
+            {
+                pointX += Random.Range(-0.15f, 0.15f);
+            }
+            float pointY = Mathf.Lerp(boltTop, strikeBottom, pointShare);
+            boltLine.SetPosition(pointNumber, new Vector3(pointX, pointY, 0f));
+        }
+        boltLine.enabled = true;
+    }
+
+    // The bolt and the white flash of the cloud last a moment after each strike.
+    void ShowFlash()
+    {
+        bool flashingNow = flashTimer > 0f;
+        if (boltLine != null)
+        {
+            boltLine.enabled = flashingNow;
+        }
+        if (flashingNow && rainTimer <= myCaster.duration)
+        {
+            cloudRenderer.color = Color.Lerp(myCaster.cloudColor, Color.white, flashTimer / 0.15f);
+        }
+        else if (rainTimer <= myCaster.duration)
+        {
+            cloudRenderer.color = myCaster.cloudColor;
+        }
+    }
+
+    void OnGUI()
+    {
+        if (flashTimer <= 0f || myCaster == null || myCaster.screenFlash <= 0f)
+        {
+            return;
+        }
+        Color oldColor = GUI.color;
+        GUI.color = new Color(1f, 1f, 1f, myCaster.screenFlash * (flashTimer / 0.15f));
+        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Texture2D.whiteTexture);
+        GUI.color = oldColor;
     }
 
     void OnDestroy()

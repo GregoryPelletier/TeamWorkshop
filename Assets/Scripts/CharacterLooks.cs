@@ -552,18 +552,25 @@ public class CharacterLooks : MonoBehaviour
         }
         if (myHealth != null && showHealthNumber)
         {
-            GUIStyle smallText = new GUIStyle(GUI.skin.label) { fontSize = 14 };
-            GUI.Label(new Rect(20f, Screen.height - 40f, 300f, 22f), "Health " + myHealth.CurrentHealth + " / " + myHealth.maxHealth, smallText);
+            // the player's health in the bottom left corner, red when it is low
+            int healthSize = ScreenText.SizeFor(0.045f);
+            float screenMargin = Screen.height * 0.025f;
+            Color healthColor = myHealth.HealthShare() <= 0.34f ? new Color(1f, 0.35f, 0.35f) : Color.white;
+            Rect healthArea = new Rect(screenMargin, Screen.height - screenMargin - healthSize * 1.4f, Screen.width * 0.5f, healthSize * 1.4f);
+            ScreenText.Draw(healthArea, "Health " + myHealth.CurrentHealth + " / " + myHealth.maxHealth, healthSize, TextAnchor.LowerLeft, healthColor, true);
             if (myHealth.IsDefeated)
             {
-                GUIStyle bigText = new GUIStyle(GUI.skin.label) { fontSize = 36, alignment = TextAnchor.MiddleCenter };
-                GUI.Label(new Rect(0f, Screen.height / 2f - 30f, Screen.width, 60f), "Defeated", bigText);
+                int defeatedSize = ScreenText.SizeFor(0.1f);
+                Rect defeatedArea = new Rect(0f, Screen.height * 0.4f, Screen.width, defeatedSize * 1.5f);
+                ScreenText.Draw(defeatedArea, "Defeated", defeatedSize, TextAnchor.MiddleCenter, new Color(1f, 0.3f, 0.3f), true);
             }
         }
         if (showMessages && GameMessage.TimeLeft > 0f)
         {
-            GUIStyle messageText = new GUIStyle(GUI.skin.label) { fontSize = 22, alignment = TextAnchor.MiddleCenter };
-            GUI.Label(new Rect(0f, 100f, Screen.width, 40f), GameMessage.Text, messageText);
+            // messages across the upper middle of the screen, in a soft yellow
+            int messageSize = ScreenText.SizeFor(0.042f);
+            Rect messageArea = new Rect(0f, Screen.height * 0.26f, Screen.width, messageSize * 1.6f);
+            ScreenText.Draw(messageArea, GameMessage.Text, messageSize, TextAnchor.MiddleCenter, new Color(1f, 0.93f, 0.55f), true);
         }
     }
 
@@ -580,8 +587,8 @@ public class CharacterLooks : MonoBehaviour
         {
             return;
         }
-        float barWidth = 50f;
-        float barHeight = 6f;
+        float barWidth = Mathf.Max(50f, Screen.height * 0.07f);
+        float barHeight = Mathf.Max(6f, Screen.height * 0.011f);
         Rect backRect = new Rect(barPoint.x - barWidth / 2f, Screen.height - barPoint.y - barHeight, barWidth, barHeight);
         GUI.color = Color.black;
         GUI.DrawTexture(backRect, Texture2D.whiteTexture);
