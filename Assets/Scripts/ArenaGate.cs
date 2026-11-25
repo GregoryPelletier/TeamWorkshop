@@ -1,10 +1,16 @@
 using UnityEngine;
 
-// A gate in front of a boss arena. It stays shut until every creature on the near (left) side
-// of it is defeated, then it sinks into the ground and lets the player through.
-// While it is shut and the player is close, it shows how many creatures are still left.
+// A gate that blocks the way on. It sinks into the ground and lets the player through when:
+//   Need Spell is empty: every creature on the near (left) side of it is defeated, or
+//   Need Spell is set:   the player has learned that spell (for example the Thunderstorm from a mini boss).
+// While it is shut and the player is close, it shows a message saying what is needed.
 public class ArenaGate : MonoBehaviour
 {
+    [Tooltip("Leave empty to open when every creature before the gate is defeated. Or type a spell name (like Thunderstorm) to open once the player has learned it.")]
+    public string needSpell = "";
+    [Tooltip("Shown while the gate is shut when Need Spell is set.")]
+    public string spellMessage = "Defeat the Mini Boss and pick up its spell to open the gate.";
+
     [Tooltip("Creatures whose names contain any of these are not counted (the boss waiting inside).")]
     public string[] ignoreNames = { "Mini Boss", "BOSS" };
     [Tooltip("How close the player has to be to see the message.")]
@@ -57,7 +63,14 @@ public class ArenaGate : MonoBehaviour
             return;
         }
         nextCheckTime = Time.time + 0.25f;
-        enemiesLeft = CountEnemies();
+        if (string.IsNullOrEmpty(needSpell))
+        {
+            enemiesLeft = CountEnemies();
+        }
+        else
+        {
+            enemiesLeft = PlayerHasSpell() ? 0 : 1;
+        }
         if (enemiesLeft == 0)
         {
             isOpening = true;
@@ -84,6 +97,17 @@ public class ArenaGate : MonoBehaviour
             foundCount++;
         }
         return foundCount;
+    }
+
+    bool PlayerHasSpell()
+    {
+        SpellTracker spellTracker = FindFirstObjectByType<SpellTracker>();
+        if (spellTracker == null)
+        {
+            return false;
+        }
+        int spellSlot = spellTracker.SlotOf(needSpell);
+        return spellTracker.IsKept(needSpell) || (spellSlot >= 0 && spellTracker.SpellNameIfUnlocked(spellSlot) == needSpell);
     }
 
     bool IsIgnored(string enemyName)
@@ -131,6 +155,10 @@ public class ArenaGate : MonoBehaviour
             return;
         }
         string gateMessage = "The gate is shut. Defeat every creature to open it: " + enemiesLeft + " left";
+        if (!string.IsNullOrEmpty(needSpell))
+        {
+            gateMessage = spellMessage;
+        }
         int fontSize = ScreenText.SizeFor(0.035f);
         Rect textArea = new Rect(0f, Screen.height * 0.14f, Screen.width, Screen.height * 0.08f);
         ScreenText.Draw(textArea, gateMessage, fontSize, TextAnchor.MiddleCenter, Color.white, true);

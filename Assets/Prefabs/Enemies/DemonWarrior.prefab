@@ -54,6 +54,11 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -75,6 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1101371759
   m_SortingLayer: 2
   m_SortingOrder: 0
@@ -89,6 +95,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!114 &6968250305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,10 +111,26 @@ MonoBehaviour:
   team: 1
   maxHealth: 8
   healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  chaserCombatRange: 3
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
   makeHitBox: 1
   hitBoxSize: {x: 0.6, y: 0.45}
   hitBoxOffset: {x: 0, y: 0.25}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
   dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
   whenDefeated:
     m_PersistentCalls:
       m_Calls: []
@@ -128,8 +151,15 @@ MonoBehaviour:
   noticeRange: 4.5
   noticeHeight: 2.5
   stayNearHome: 3.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!114 &5265574164
@@ -144,13 +174,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
   damageType: 0
   reach: 0.4
   cooldown: 1.3
   hitDelay: 0.4
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!114 &4990970353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +227,7 @@ MonoBehaviour:
   framesPerSecond: 9
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0

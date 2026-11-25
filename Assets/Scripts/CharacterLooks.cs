@@ -39,6 +39,8 @@ public class CharacterLooks : MonoBehaviour
     public Color hurtColor = new Color(1f, 0.45f, 0.45f);
     [Tooltip("Shake a little when hit (a cage).")]
     public bool shakeWhenHurt = false;
+    [Tooltip("Seconds before a hit can make this flinch again (play its hurt animation). Hits in between only flash it, and a hit never stops an attack that has started, so it cannot be kept stunned.")]
+    public float flinchCooldown = 1.5f;
 
     [Header("Shield (shown while the Health's shield is up)")]
     public Sprite[] shieldFrames;
@@ -73,6 +75,8 @@ public class CharacterLooks : MonoBehaviour
     Color normalColor = Color.white;
     bool facingRight = true;
     float hurtTimer;
+    float nextFlinchTime;
+    float attackStartTime = -100f;
     float shakeTimer;
     Vector3 shakeHome;
     float shownRedAmount;
@@ -213,6 +217,7 @@ public class CharacterLooks : MonoBehaviour
             PlayNamed(attackAnimations[attackNumber % attackAnimations.Length]);
             attackNumber = attackNumber + 1;
         }
+        attackStartTime = Time.time;
         PlayFrames(attackFrames, false);
     }
 
@@ -336,6 +341,13 @@ public class CharacterLooks : MonoBehaviour
         {
             return;
         }
+        // only the colour flash: still flinching from the last hit, or in the middle of an attack
+        bool isAttacking = Time.time - attackStartTime < 0.6f;
+        if (Time.time < nextFlinchTime || isAttacking)
+        {
+            return;
+        }
+        nextFlinchTime = Time.time + flinchCooldown;
         PlayNamed(hurtAnimation);
         if (hurtFrames != null && hurtFrames.Length > 0 && currentFrames != attackFrames)
         {
