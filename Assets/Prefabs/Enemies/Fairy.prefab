@@ -54,6 +54,11 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -75,6 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1101371759
   m_SortingLayer: 2
   m_SortingOrder: 1
@@ -89,6 +95,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!114 &3971941915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,10 +111,26 @@ MonoBehaviour:
   team: 1
   maxHealth: 3
   healAmount: 0
+  healDelay: 0.5
+  healDelayInCombat: 3
+  combatTime: 4
+  chaserCombatRange: 3
+  onlyHurtByType: 0
+  onlyHurtBy: 1
+  hasShield: 0
+  shieldBrokenBy: 2
+  shieldDownTime: 6
+  holding: {fileID: 0}
   makeHitBox: 1
   hitBoxSize: {x: 0, y: 0}
   hitBoxOffset: {x: 0, y: 0}
+  messageWhenBlocked: 
+  messageWhenHurt: 
+  messageWhenDefeated: 
   dropWhenDefeated: {fileID: 0}
+  turnOffWhenDefeated: []
+  restartLevelWhenDefeated: 0
+  restartDelay: 3
   whenDefeated:
     m_PersistentCalls:
       m_Calls: []
@@ -125,11 +148,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveStyle: 1
   moveSpeed: 1.4
-  noticeRange: 5
+  noticeRange: 6
   noticeHeight: 2.5
-  stayNearHome: 4
+  stayNearHome: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.05
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.35
   bobAmount: 0.1
 --- !u!114 &5739849997
@@ -151,6 +181,7 @@ MonoBehaviour:
   hitDelay: 0.25
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!114 &8473395053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +225,7 @@ MonoBehaviour:
   framesPerSecond: 10
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0

@@ -2077,6 +2077,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.4, b: 0.4, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 0
   showRedFill: 1
@@ -3262,6 +3263,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -3595,8 +3597,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!114 &303080948
@@ -3618,6 +3627,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!1001 &310564253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4096,6 +4106,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -5065,8 +5076,8 @@ BoxCollider2D:
   m_Offset: {x: -0.05717647, y: -0.20494819}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5079365}
+    oldSize: {x: 1, y: 0.984375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5194,6 +5205,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   jumpClipLength: 0.875
+  crouchHeight: 0.6
 --- !u!114 &451879537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5356,6 +5368,7 @@ MonoBehaviour:
   hitDelay: 0.15
   pauseAfterHit: 0
   useKeyboard: 1
+  attackLow: 0
 --- !u!114 &470719661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5387,6 +5400,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -5429,6 +5443,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -5550,7 +5565,7 @@ MonoBehaviour:
   sourceCreatures:
   - 
   - 
-  spellUnlocked: 0000
+  spellUnlocked: 0000y
 --- !u!1 &489264010
 GameObject:
   m_ObjectHideFlags: 0
@@ -5771,8 +5786,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!1 &512438956
@@ -6677,8 +6699,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 4
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!1 &574902331
@@ -7223,22 +7252,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1846200102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630075752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b1e0d7a3c9f4e2a8d6b4f1c2e7a9b30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  branchTiles:
-  - {fileID: 11400000, guid: 7cfd15b88182b144fb5ca38cd873ab38, type: 2}
-  - {fileID: 11400000, guid: c8333b967d8f8a14abe3e6fa6359fcba, type: 2}
-  - {fileID: 11400000, guid: aef977185b0dff74a8071a842ae62b2a, type: 2}
 --- !u!4 &630075753
 Transform:
   m_ObjectHideFlags: 0
@@ -7319,86 +7332,6 @@ Tilemap:
   m_GameObject: {fileID: 630075752}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 319, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 22
-      m_TileSpriteIndex: 22
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 318, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 19
-      m_TileSpriteIndex: 19
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 319, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 318, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 131, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 22
-      m_TileSpriteIndex: 22
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 130, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 19
-      m_TileSpriteIndex: 19
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 131, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 130, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -36, y: -9, z: 0}
     second:
       serializedVersion: 2
@@ -74949,6 +74882,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 130, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 131, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 132, y: 4, z: 0}
     second:
       serializedVersion: 2
@@ -75320,6 +75273,26 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 314, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 318, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 319, y: 4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 4
@@ -75889,6 +75862,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 130, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 19
+      m_TileSpriteIndex: 19
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 131, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 22
+      m_TileSpriteIndex: 22
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 132, y: 5, z: 0}
     second:
       serializedVersion: 2
@@ -76244,6 +76237,26 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 4
       m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 318, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 19
+      m_TileSpriteIndex: 19
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 319, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 22
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -77472,8 +77485,8 @@ Tilemap:
   - first: {x: 422, y: 6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 14
-      m_TileSpriteIndex: 14
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -79182,8 +79195,8 @@ Tilemap:
   - first: {x: 422, y: 9, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 14
-      m_TileSpriteIndex: 14
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -80382,8 +80395,8 @@ Tilemap:
   - first: {x: 422, y: 12, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 14
-      m_TileSpriteIndex: 14
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -80554,7 +80567,7 @@ Tilemap:
     m_RefCount: 120
     m_Data: {fileID: 11400000, guid: 0ea033c555a94d83ab6dae4222e57725, type: 2}
   - serializedVersion: 2
-    m_RefCount: 113
+    m_RefCount: 116
     m_Data: {fileID: 11400000, guid: da93fd71bab14515bff52b4a6e44ab32, type: 2}
   - serializedVersion: 2
     m_RefCount: 130
@@ -80584,7 +80597,7 @@ Tilemap:
     m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 3eafdadfb53649189988968ca31af87c, type: 2}
   - serializedVersion: 2
-    m_RefCount: 28
+    m_RefCount: 25
     m_Data: {fileID: 11400000, guid: 798e7560dd574e0a89657c037c0224f2, type: 2}
   - serializedVersion: 2
     m_RefCount: 25
@@ -80624,7 +80637,7 @@ Tilemap:
     m_RefCount: 120
     m_Data: {fileID: 1830132956, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
-    m_RefCount: 113
+    m_RefCount: 116
     m_Data: {fileID: 1405475804, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
     m_RefCount: 130
@@ -80654,7 +80667,7 @@ Tilemap:
     m_RefCount: 1
     m_Data: {fileID: 1825159741, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
-    m_RefCount: 28
+    m_RefCount: 25
     m_Data: {fileID: 598983383, guid: 05840a0ae70044daa6d48b0e2e3aa55b, type: 3}
   - serializedVersion: 2
     m_RefCount: 25
@@ -83444,11 +83457,17 @@ MonoBehaviour:
   cloudSprite: {fileID: 21300000, guid: 088c2f8f136b42079c4194b5fbef75c1, type: 3}
   dropSprite: {fileID: 21300000, guid: 6897d3cc66ac4c8c9bb6f288ab412984, type: 3}
   cooldown: 4
+  castLockTime: 0.6
   duration: 2.5
   damage: 1
   cloudDistance: 1.1
   cloudHeight: 1.5
   cloudWidth: 1.4
+  cloudColor: {r: 0.42, g: 0.42, b: 0.52, a: 1}
+  lightningEvery: 0.6
+  lightningDamage: 1
+  lightningColor: {r: 1, g: 0.97, b: 0.65, a: 1}
+  screenFlash: 0.25
 --- !u!1001 &640120286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83602,6 +83621,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -84418,6 +84438,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -84565,6 +84586,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames:
   - {fileID: 21300000, guid: 5430a5344d5641e192d1c87aa6218260, type: 3}
   - {fileID: 21300000, guid: 9c9fbf25933d48bbb38b5bd6b413d735, type: 3}
@@ -85532,6 +85554,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!4 &918779015
 Transform:
   m_ObjectHideFlags: 0
@@ -85574,6 +85597,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -85610,8 +85634,15 @@ MonoBehaviour:
   noticeRange: 5
   noticeHeight: 2.5
   stayNearHome: 6
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.2
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!1 &945327934
@@ -86738,6 +86769,7 @@ MonoBehaviour:
   healDelay: 0.25
   healDelayInCombat: 12
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -86883,8 +86915,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!1 &1135292215
@@ -88217,6 +88256,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 1
@@ -88667,8 +88707,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!4 &1299623140
@@ -88708,13 +88755,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 3
   damageType: 0
   reach: 0.45
   cooldown: 1.8
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!1 &1306145420
 GameObject:
   m_ObjectHideFlags: 0
@@ -88838,6 +88886,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -89451,6 +89500,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -89462,6 +89512,80 @@ MonoBehaviour:
   turnOffColliders: 0
   fadeAfter: 0.5
   fadeTime: 0.5
+--- !u!1001 &1355042788
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1467153800}
+    m_Modifications:
+    - target: {fileID: 320710332273849643, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: needSpell
+      value: Thunderstorm
+      objectReference: {fileID: 0}
+    - target: {fileID: 320710332273849643, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: messageRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 320710332273849643, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: spellMessage
+      value: Beat the Fire Imp Mini Boss and pick up the Thunderstorm to open the gate.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004188850204127471, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_Name
+      value: Thunderstorm Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 58.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+--- !u!4 &1355042789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6485816365097655442, guid: 5c3c6b2f0836ab44abaeb02820a36252, type: 3}
+  m_PrefabInstance: {fileID: 1355042788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1357550241
 GameObject:
   m_ObjectHideFlags: 0
@@ -89877,6 +90001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireballPrefab: {fileID: 3369195110237270493, guid: 7e78633fe7b5d3f4da0e8281111b2bda, type: 3}
   cooldown: 0.6
+  castLockTime: 0.6
   manaCost: 20
   maxMana: 100
   manaRegenPerSecond: 10
@@ -91026,6 +91151,7 @@ Transform:
   - {fileID: 846589540}
   - {fileID: 1829016176}
   - {fileID: 1701958196}
+  - {fileID: 1355042789}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1474639668
@@ -91192,13 +91318,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3b9b229f9b44ed951ebe5d417a722b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
   damageType: 0
   reach: 0.4
   cooldown: 1.4
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!1001 &1538999988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92727,6 +92854,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!4 &1701958196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2884145024, guid: f256dfb0d7a74c8ea12a71723689f99b, type: 3}
@@ -93433,6 +93561,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -93452,6 +93581,22 @@ MonoBehaviour:
   whenDefeated:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1846200102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630075752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1e0d7a3c9f4e2a8d6b4f1c2e7a9b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  branchTiles:
+  - {fileID: 11400000, guid: 652840e57b464e97a9ef562618e569f5, type: 2}
+  - {fileID: 11400000, guid: 4831d8f625cf452780e18f9d4bf04d41, type: 2}
+  - {fileID: 11400000, guid: bcb519a1936140e3a0591590b896ed35, type: 2}
 --- !u!4 &1849689547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2884145024, guid: 16ee2f1af12d4050bf003513cbffb410, type: 3}
@@ -93679,6 +93824,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!1 &1906280439
 GameObject:
   m_ObjectHideFlags: 0
@@ -94128,9 +94274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellName: Thunderstorm
+  loseSpellAtHealth: 0.2
   respawnWhenLost: {fileID: 650767176}
   keepAfterBeating: {fileID: 1251475011}
-  loseSpellAtHealth: 0.2
   pickupDistance: 0.45
   bobAmount: 0.08
   glowSpeed: 3
