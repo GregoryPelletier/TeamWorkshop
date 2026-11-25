@@ -3595,8 +3595,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!114 &303080948
@@ -3618,6 +3625,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!1001 &310564253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4096,6 +4104,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -5065,8 +5074,8 @@ BoxCollider2D:
   m_Offset: {x: -0.05717647, y: -0.20494819}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5079365}
+    oldSize: {x: 1, y: 0.984375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5194,6 +5203,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   jumpClipLength: 0.875
+  crouchHeight: 0.6
 --- !u!114 &451879537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5356,6 +5366,7 @@ MonoBehaviour:
   hitDelay: 0.15
   pauseAfterHit: 0
   useKeyboard: 1
+  attackLow: 0
 --- !u!114 &470719661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5771,8 +5782,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!1 &512438956
@@ -6677,8 +6695,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 4
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!1 &574902331
@@ -7223,22 +7248,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1846200102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630075752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b1e0d7a3c9f4e2a8d6b4f1c2e7a9b30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  branchTiles:
-  - {fileID: 11400000, guid: 7cfd15b88182b144fb5ca38cd873ab38, type: 2}
-  - {fileID: 11400000, guid: c8333b967d8f8a14abe3e6fa6359fcba, type: 2}
-  - {fileID: 11400000, guid: aef977185b0dff74a8071a842ae62b2a, type: 2}
 --- !u!4 &630075753
 Transform:
   m_ObjectHideFlags: 0
@@ -7319,86 +7328,6 @@ Tilemap:
   m_GameObject: {fileID: 630075752}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 319, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 22
-      m_TileSpriteIndex: 22
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 318, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 19
-      m_TileSpriteIndex: 19
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 319, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 318, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 131, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 22
-      m_TileSpriteIndex: 22
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 130, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 19
-      m_TileSpriteIndex: 19
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 131, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 130, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -36, y: -9, z: 0}
     second:
       serializedVersion: 2
@@ -74949,6 +74878,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 130, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 131, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 132, y: 4, z: 0}
     second:
       serializedVersion: 2
@@ -75320,6 +75269,26 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 314, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 318, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 319, y: 4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 4
@@ -75889,6 +75858,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 130, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 19
+      m_TileSpriteIndex: 19
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 131, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 22
+      m_TileSpriteIndex: 22
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 132, y: 5, z: 0}
     second:
       serializedVersion: 2
@@ -76244,6 +76233,26 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 4
       m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 318, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 19
+      m_TileSpriteIndex: 19
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 319, y: 5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 22
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -83444,11 +83453,17 @@ MonoBehaviour:
   cloudSprite: {fileID: 21300000, guid: 088c2f8f136b42079c4194b5fbef75c1, type: 3}
   dropSprite: {fileID: 21300000, guid: 6897d3cc66ac4c8c9bb6f288ab412984, type: 3}
   cooldown: 4
+  castLockTime: 0.6
   duration: 2.5
   damage: 1
   cloudDistance: 1.1
   cloudHeight: 1.5
   cloudWidth: 1.4
+  cloudColor: {r: 0.42, g: 0.42, b: 0.52, a: 1}
+  lightningEvery: 0.6
+  lightningDamage: 1
+  lightningColor: {r: 1, g: 0.97, b: 0.65, a: 1}
+  screenFlash: 0.25
 --- !u!1001 &640120286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83602,6 +83617,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -84418,6 +84434,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -85532,6 +85549,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!4 &918779015
 Transform:
   m_ObjectHideFlags: 0
@@ -85574,6 +85592,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -85610,8 +85629,15 @@ MonoBehaviour:
   noticeRange: 5
   noticeHeight: 2.5
   stayNearHome: 6
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.2
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!1 &945327934
@@ -86738,6 +86764,7 @@ MonoBehaviour:
   healDelay: 0.25
   healDelayInCombat: 12
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -86883,8 +86910,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!1 &1135292215
@@ -88217,6 +88251,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 1
@@ -88667,8 +88702,15 @@ MonoBehaviour:
   noticeRange: 4
   noticeHeight: 2.5
   stayNearHome: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  ledgeCheckForwardOffset: 0.2
+  ledgeCheckDepth: 0.6
+  wallCheckDistance: 0.15
   attackRange: 0.15
   reachHeight: 0.7
+  standStillGap: 0.3
   hoverHeight: 0.9
   bobAmount: 0.12
 --- !u!4 &1299623140
@@ -88715,6 +88757,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!1 &1306145420
 GameObject:
   m_ObjectHideFlags: 0
@@ -89877,6 +89920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireballPrefab: {fileID: 3369195110237270493, guid: 7e78633fe7b5d3f4da0e8281111b2bda, type: 3}
   cooldown: 0.6
+  castLockTime: 0.6
   manaCost: 20
   maxMana: 100
   manaRegenPerSecond: 10
@@ -91199,6 +91243,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!1001 &1538999988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92727,6 +92772,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!4 &1701958196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2884145024, guid: f256dfb0d7a74c8ea12a71723689f99b, type: 3}
@@ -93433,6 +93479,7 @@ MonoBehaviour:
   healDelay: 0.5
   healDelayInCombat: 3
   combatTime: 4
+  chaserCombatRange: 3
   onlyHurtByType: 0
   onlyHurtBy: 1
   hasShield: 0
@@ -93452,6 +93499,22 @@ MonoBehaviour:
   whenDefeated:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1846200102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630075752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1e0d7a3c9f4e2a8d6b4f1c2e7a9b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  branchTiles:
+  - {fileID: 11400000, guid: 7cfd15b88182b144fb5ca38cd873ab38, type: 2}
+  - {fileID: 11400000, guid: c8333b967d8f8a14abe3e6fa6359fcba, type: 2}
+  - {fileID: 11400000, guid: aef977185b0dff74a8071a842ae62b2a, type: 2}
 --- !u!4 &1849689547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2884145024, guid: 16ee2f1af12d4050bf003513cbffb410, type: 3}
@@ -93679,6 +93742,7 @@ MonoBehaviour:
   hitDelay: 0.45
   pauseAfterHit: 0.35
   useKeyboard: 0
+  attackLow: 0
 --- !u!1 &1906280439
 GameObject:
   m_ObjectHideFlags: 0
@@ -94128,9 +94192,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellName: Thunderstorm
+  loseSpellAtHealth: 0.2
   respawnWhenLost: {fileID: 650767176}
   keepAfterBeating: {fileID: 1251475011}
-  loseSpellAtHealth: 0.2
   pickupDistance: 0.45
   bobAmount: 0.08
   glowSpeed: 3
