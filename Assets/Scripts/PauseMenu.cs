@@ -229,6 +229,11 @@ public class PauseMenu : MonoBehaviour
         {
             Rect hintArea = new Rect(0f, Screen.height * 0.01f, Screen.width - Screen.width * 0.01f, Screen.height * 0.05f);
             ScreenText.Draw(hintArea, "Esc: Menu", smallSize, TextAnchor.UpperRight, new Color(1f, 1f, 1f, 0.7f), false);
+            if (Health.playerInvincible)
+            {
+                Rect invincibleArea = new Rect(0f, Screen.height * 0.05f, Screen.width - Screen.width * 0.01f, Screen.height * 0.05f);
+                ScreenText.Draw(invincibleArea, "INVINCIBLE", smallSize, TextAnchor.UpperRight, Color.yellow, false);
+            }
             if (Time.time < noteUntil)
             {
                 Rect noteArea = new Rect(0f, Screen.height * 0.2f, Screen.width, Screen.height * 0.06f);
@@ -264,15 +269,25 @@ public class PauseMenu : MonoBehaviour
         {
             Unstuck();
         }
-        if (GUI.Button(new Rect(buttonLeft, buttonTop + buttonGap * 2f, buttonWidth, buttonHeight), "Restart Level", buttonStyle))
+        string invincibleLabel = "Invincible: Off";
+        if (Health.playerInvincible)
+        {
+            invincibleLabel = "Invincible: On";
+        }
+        if (GUI.Button(new Rect(buttonLeft, buttonTop + buttonGap * 2f, buttonWidth, buttonHeight), invincibleLabel, buttonStyle))
+        {
+            Health.playerInvincible = !Health.playerInvincible;
+        }
+
+        if (GUI.Button(new Rect(buttonLeft, buttonTop + buttonGap * 3f, buttonWidth, buttonHeight), "Restart Level", buttonStyle))
         {
             RestartLevel();
         }
-        if (GUI.Button(new Rect(buttonLeft, buttonTop + buttonGap * 3f, buttonWidth, buttonHeight), "Quit Game", buttonStyle))
+        if (GUI.Button(new Rect(buttonLeft, buttonTop + buttonGap * 4f, buttonWidth, buttonHeight), "Quit Game", buttonStyle))
         {
             QuitGame();
         }
-        Rect helpArea = new Rect(0f, buttonTop + buttonGap * 4.1f, Screen.width, Screen.height * 0.05f);
+        Rect helpArea = new Rect(0f, buttonTop + buttonGap * 5.1f, Screen.width, Screen.height * 0.05f);
         ScreenText.Draw(helpArea, "Unstuck moves you back to the last place you stood safely.", smallSize, TextAnchor.MiddleCenter, Color.white, false);
     }
 }

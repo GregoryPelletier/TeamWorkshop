@@ -84,6 +84,7 @@ public class Health : MonoBehaviour
 
     // ---- for the other building blocks ----
     public static List<Health> All = new List<Health>();
+    public static bool playerInvincible = false;
     public event Action WasHurt;
     public event Action WasBlocked;
     public event Action WasDefeated;
@@ -189,6 +190,10 @@ public class Health : MonoBehaviour
     public bool TakeDamage(int damageAmount, DamageType damageType, Team attackerTeam)
     {
         if (IsDefeated || IsHeld || !CanBeHurtBy(attackerTeam))
+        {
+            return false;
+        }
+        if (team == Team.Player && playerInvincible)
         {
             return false;
         }
