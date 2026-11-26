@@ -6238,6 +6238,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1865658887}
+    - targetCorrespondingSourceObject: {fileID: 2803820806472684270, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1865658888}
   m_SourcePrefab: {fileID: 100100000, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
 --- !u!4 &598768671 stripped
 Transform:
@@ -81137,6 +81140,29 @@ MonoBehaviour:
   turnOffColliders: 0
   fadeAfter: 0.5
   fadeTime: 0.5
+--- !u!114 &1865658888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391334444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d243bd08d0665ae43adf5c981220e960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossLastWords
+  lastWords:
+  - Ha ha ha... am I gone?? Bones never stay broken for long...
+  - Heh heh heh... I'm not gone, little mage. I'm only going ahead to wait with the Dragon.
+  - Rattle, rattle... can you hear that? It's my master's wings.
+  - You won the woods... but the Dragon keeps my bones. We will meet again.
+  - Snap me all you like. The Dragon will put me back together!
+  - Ha ha ha! Enjoy it, mage. The Dragon's lair has room for one more skeleton... YOURS.
+  textColor: {r: 0.92, g: 0.92, b: 0.85, a: 1}
+  showSeconds: 5
+  lettersPerSecond: 28
+  heightAbove: 2.2
 --- !u!4 &1875808669 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2884145024, guid: be299b309135466ab8385b53af011d49, type: 3}

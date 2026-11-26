@@ -94468,12 +94468,38 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8270d645418979d4998c82fd8c7848f3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 787241330}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8270d645418979d4998c82fd8c7848f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979826058}
   m_SourcePrefab: {fileID: 100100000, guid: 8270d645418979d4998c82fd8c7848f3, type: 3}
 --- !u!4 &1979826057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8270d645418979d4998c82fd8c7848f3, type: 3}
   m_PrefabInstance: {fileID: 1979826056}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1979826058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909043942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d243bd08d0665ae43adf5c981220e960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossLastWords
+  lastWords:
+  - Hee hee hee... am I gone?? Embers never really go out...
+  - You put out MY fire... but the Dragon breathes a much bigger one!
+  - Rain won't save you where I'm going. The Dragon's flames are waiting!
+  - Hee hee! I'm only smoke now... and smoke drifts to the Dragon's lair.
+  - Sizzle, sizzle... I'll be warming my hands on the Dragon's breath. See you there!
+  - Ha ha! Storm all you want, mage. Nothing puts out a Dragon.
+  textColor: {r: 1, g: 0.6, b: 0.2, a: 1}
+  showSeconds: 5
+  lettersPerSecond: 28
+  heightAbove: 2.2
 --- !u!1 &1981691443
 GameObject:
   m_ObjectHideFlags: 0

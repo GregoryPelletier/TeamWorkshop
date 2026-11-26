@@ -2052,6 +2052,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f2acee94637eae4bac4409721177d05, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1301543375}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7f2acee94637eae4bac4409721177d05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1301543379}
   m_SourcePrefab: {fileID: 100100000, guid: 7f2acee94637eae4bac4409721177d05, type: 3}
 --- !u!1 &126845841
 GameObject:
@@ -2842,6 +2845,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -8239,6 +8243,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -113491,6 +113496,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -114974,6 +114980,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -115531,6 +115538,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -119719,6 +119727,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -121121,6 +121130,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -121218,6 +121228,29 @@ MonoBehaviour:
   whenDefeated:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1301543379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301543372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d243bd08d0665ae43adf5c981220e960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossLastWords
+  lastWords:
+  - Ha... ha... ha... am I gone?? A mountain never really falls...
+  - Stone cracks, little mage... but the Dragon will make me whole again.
+  - Crumble me if you like. Every pebble rolls toward the Dragon.
+  - You broke my body. The Dragon will give me a stronger one.
+  - Rocks remember, mage... and we will remember YOU in the Dragon's cave.
+  - This is not the end. The Dragon is waking... and I will stand beside it.
+  textColor: {r: 0.75, g: 0.8, b: 0.9, a: 1}
+  showSeconds: 5
+  lettersPerSecond: 28
+  heightAbove: 2.2
 --- !u!1 &1306145420
 GameObject:
   m_ObjectHideFlags: 0
@@ -124389,6 +124422,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -124614,6 +124648,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -129299,6 +129334,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -129819,6 +129855,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -130533,6 +130570,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -130666,6 +130704,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -131142,6 +131181,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.45, b: 0.45, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 1
   showRedFill: 0
@@ -131570,6 +131610,7 @@ MonoBehaviour:
   framesPerSecond: 8
   hurtColor: {r: 1, g: 0.4, b: 0.4, a: 1}
   shakeWhenHurt: 0
+  flinchCooldown: 1.5
   shieldFrames: []
   showHealthBar: 0
   showRedFill: 1
